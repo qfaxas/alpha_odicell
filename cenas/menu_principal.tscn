@@ -1,16 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://uwo2865skh6a"]
 
-[ext_resource type="AudioStream" uid="uid://dplx686k3soly" path="res://The Witcher 3 OST - Steel for Humans (Extended Version)_BLqktDBIew8.mp3" id="1_1d1g2"]
-[ext_resource type="Script" path="res://control.gd" id="1_022qp"]
+[ext_resource type="Script" path="res://scripts/menu_principal.gd" id="1_u8gq7"]
+[ext_resource type="AudioStream" uid="uid://vxxj664ew2t6" path="res://assets/musica/The Witcher 3 OST - Steel for Humans (Extended Version)_BLqktDBIew8.mp3" id="2_awajl"]
 
-[node name="Control" type="Control"]
+[node name="menu_principal" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_022qp")
+script = ExtResource("1_u8gq7")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -36,7 +36,7 @@ offset_bottom = 485.0
 text = "botao"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_1d1g2")
+stream = ExtResource("2_awajl")
 autoplay = true
 
 [node name="Label2" type="Label" parent="."]
