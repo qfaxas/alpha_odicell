@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://mjylardyl2jy"]
+[gd_scene load_steps=2 format=3 uid="uid://mjylardyl2jy"]
+
+[ext_resource type="Script" path="res://scripts/cena_2.gd" id="1_bmyy6"]
 
 [node name="cena_2" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bmyy6")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -21,12 +24,14 @@ offset_right = 25.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "cena 2"
+text = "*insira jogo aqui*"
 
-[node name="Button" type="Button" parent="."]
+[node name="voltar" type="Button" parent="."]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 378.0
 offset_right = 609.0
 offset_bottom = 409.0
-text = "botao 2"
+text = "Voltar"
+
+[connection signal="pressed" from="voltar" to="." method="_on_button_pressed"]
