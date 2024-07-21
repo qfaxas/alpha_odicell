@@ -7,7 +7,7 @@ func _on_play_button_pressed():
 
 
 func _on_options_button_pressed():
-	get_tree().change_scene_to_file("res://cenas/menu_opções.tscn")
+	get_tree().change_scene_to_file("res://cenas/menu_opcoes.tscn")
 
 
 func _on_credits_button_pressed():
