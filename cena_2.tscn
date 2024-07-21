@@ -22,3 +22,11 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "cena 2"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 378.0
+offset_right = 609.0
+offset_bottom = 409.0
+text = "botao 2"
