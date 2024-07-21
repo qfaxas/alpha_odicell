@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://uwo2865skh6a"]
 
-[ext_resource type="AudioStream" uid="uid://vxxj664ew2t6" path="res://The Witcher 3 OST - Steel for Humans (Extended Version)_BLqktDBIew8.mp3" id="1_1d1g2"]
+[ext_resource type="AudioStream" uid="uid://dplx686k3soly" path="res://The Witcher 3 OST - Steel for Humans (Extended Version)_BLqktDBIew8.mp3" id="1_1d1g2"]
 [ext_resource type="Script" path="res://control.gd" id="1_022qp"]
 
 [node name="Control" type="Control"]
