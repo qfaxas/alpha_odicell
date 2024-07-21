@@ -1,15 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://d1jxpw8vdu2fs"]
 
-[ext_resource type="Script" path="res://scripts/menu_opções.gd" id="1_hngoc"]
+[ext_resource type="Script" path="res://scripts/menu_opcoes.gd" id="1_dp5ff"]
 
-[node name="menu_opções" type="Control"]
+[node name="menu_opcoes" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hngoc")
+script = ExtResource("1_dp5ff")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
