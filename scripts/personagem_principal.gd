@@ -28,4 +28,4 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func morrer():
-	queue_free()
+	get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
