@@ -6,13 +6,15 @@
 size = Vector2(19, 39)
 
 [node name="Personagem_principal" type="CharacterBody2D"]
+floor_constant_speed = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(297.5, 315)
+position = Vector2(3, -7)
 scale = Vector2(1.90625, 1.9375)
 texture = ExtResource("1_sp3t6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(294.5, 322.5)
 shape = SubResource("RectangleShape2D_0xoje")
+
+[node name="Camera2D" type="Camera2D" parent="."]

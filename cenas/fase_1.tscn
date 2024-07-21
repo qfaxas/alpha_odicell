@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqcuustgjbj7a"]
+[gd_scene load_steps=11 format=3 uid="uid://cqcuustgjbj7a"]
 
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="1_m7cyb"]
 [ext_resource type="PackedScene" uid="uid://c3so6flpnqijv" path="res://cenas/personagem_principal.tscn" id="2_k5bws"]
 [ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="3_yv432"]
 [ext_resource type="PackedScene" uid="uid://cgyudj2f6k7vh" path="res://cenas/quadrado_morte.tscn" id="4_qnqvr"]
+[ext_resource type="PackedScene" uid="uid://clf3apiofsvp6" path="res://cenas/plataforma.tscn" id="5_4mp1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8xr7i"]
 texture = ExtResource("1_m7cyb")
@@ -51,6 +52,43 @@ texture = ExtResource("1_m7cyb")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8xr7i")
 
+[sub_resource type="Animation" id="Animation_m6b5x"]
+resource_name = "lateral"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1214, 611), Vector2(1407, 611)]
+}
+
+[sub_resource type="Animation" id="Animation_kh6dx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1214, 611)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uf8w3"]
+_data = {
+"RESET": SubResource("Animation_kh6dx"),
+"lateral": SubResource("Animation_m6b5x")
+}
+
 [node name="fase1" type="Node2D"]
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]
@@ -64,3 +102,13 @@ layer_0/tile_data = PackedInt32Array(2555904, 65536, 0, 2555905, 65536, 0, 25559
 
 [node name="quadrado_morte" parent="." instance=ExtResource("4_qnqvr")]
 position = Vector2(653, 583)
+
+[node name="Node2D" parent="." instance=ExtResource("5_4mp1v")]
+position = Vector2(1214, 611)
+scale = Vector2(1.99923, 0.318135)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D"]
+libraries = {
+"": SubResource("AnimationLibrary_uf8w3")
+}
+autoplay = "lateral"
