@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://x5am5mog1v2d" path="res://assets/arte/lanterna.png" id="1_sp3t6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
-size = Vector2(26, 39)
+size = Vector2(19, 39)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Personagem_principal" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -14,5 +14,5 @@ scale = Vector2(1.90625, 1.9375)
 texture = ExtResource("1_sp3t6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(295, 322.5)
+position = Vector2(294.5, 322.5)
 shape = SubResource("RectangleShape2D_0xoje")
