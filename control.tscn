@@ -22,3 +22,11 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "TESTE"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 366.0
+offset_right = 628.0
+offset_bottom = 485.0
+text = "botao"
