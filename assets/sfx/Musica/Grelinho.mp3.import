@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b7aqrea8fdg8q"
-path="res://.godot/imported/Grelinho.mp3-ed762fc17b2636dc5938821602ff97f6.mp3str"
+path="res://.godot/imported/Grelinho.mp3-ff9ef0291aeb646fd27db6a813e11324.mp3str"
 
 [deps]
 
-source_file="res://sfx/Musica/Grelinho.mp3"
-dest_files=["res://.godot/imported/Grelinho.mp3-ed762fc17b2636dc5938821602ff97f6.mp3str"]
+source_file="res://assets/sfx/Musica/Grelinho.mp3"
+dest_files=["res://.godot/imported/Grelinho.mp3-ff9ef0291aeb646fd27db6a813e11324.mp3str"]
 
 [params]
 

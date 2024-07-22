@@ -2,6 +2,11 @@ extends Node
 
 @onready var energia = $Energia
 
+var fase1 = true
+var fase2 = false
+var fase3 = false
+
+
 var escuro = false
 
 func _on_timer_timeout():
