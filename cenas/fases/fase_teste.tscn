@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://bikwjt7hoq1lp"]
 
-[ext_resource type="Script" path="res://scripts/fase_2.gd" id="1_843sm"]
-[ext_resource type="PackedScene" uid="uid://c3so6flpnqijv" path="res://cenas/personagem_principal.tscn" id="1_g8g3x"]
-[ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="2_cfgho"]
-[ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="3_cicq2"]
-[ext_resource type="PackedScene" uid="uid://cgyudj2f6k7vh" path="res://cenas/quadrado_morte.tscn" id="4_6at3r"]
-[ext_resource type="PackedScene" uid="uid://clf3apiofsvp6" path="res://cenas/plataforma.tscn" id="5_13xja"]
+[ext_resource type="Script" path="res://scripts/fase_teste.gd" id="1_l70wr"]
+[ext_resource type="PackedScene" uid="uid://c3so6flpnqijv" path="res://cenas/personagem_principal.tscn" id="2_7k0lu"]
+[ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="3_r3108"]
+[ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="4_qkip7"]
+[ext_resource type="PackedScene" uid="uid://cgyudj2f6k7vh" path="res://cenas/quadrado_morte.tscn" id="5_rgg61"]
+[ext_resource type="PackedScene" uid="uid://clf3apiofsvp6" path="res://cenas/plataforma.tscn" id="6_2ut3f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8xr7i"]
-texture = ExtResource("3_cicq2")
+texture = ExtResource("4_qkip7")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -90,12 +90,12 @@ _data = {
 "lateral": SubResource("Animation_m6b5x")
 }
 
-[node name="fase2" type="Node2D"]
-script = ExtResource("1_843sm")
+[node name="fase_teste" type="Node2D"]
+script = ExtResource("1_l70wr")
 
-[node name="Personagem_principal" parent="." instance=ExtResource("1_g8g3x")]
+[node name="Personagem_principal" parent="." instance=ExtResource("2_7k0lu")]
 position = Vector2(298, 119)
-script = ExtResource("2_cfgho")
+script = ExtResource("3_r3108")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -103,10 +103,10 @@ tile_set = SubResource("TileSet_yufic")
 format = 2
 layer_0/tile_data = PackedInt32Array(2555904, 65536, 0, 2555905, 65536, 0, 2555906, 65536, 0, 2555907, 65536, 0, 2555908, 65536, 0, 2555909, 65536, 0, 2555910, 65536, 0, 2555911, 65536, 0, 2555912, 65536, 0, 2555913, 65536, 0, 2555914, 65536, 0, 2555915, 65536, 0, 2555916, 65536, 0, 2555917, 65536, 0, 2555918, 65536, 0, 2555919, 65536, 0, 2555920, 65536, 0, 2555921, 65536, 0, 2555922, 65536, 0, 2555923, 65536, 0, 2555924, 65536, 0, 2555925, 65536, 0, 2555926, 65536, 0, 2555927, 65536, 0, 2555928, 65536, 0, 2555929, 65536, 0, 2555930, 65536, 0, 2555931, 65536, 0, 2555932, 65536, 0, 2555933, 65536, 0, 2555934, 65536, 0, 2555935, 65536, 0, 2555936, 65536, 0, 2555937, 65536, 0, 2555938, 65536, 0, 2555939, 65536, 0, 2555940, 65536, 0, 2555941, 65536, 0, 2555942, 65536, 0, 2555943, 65536, 0, 2555944, 65536, 0, 2555945, 65536, 0, 2555946, 65536, 0, 2555947, 65536, 0, 2555948, 65536, 0, 2555949, 65536, 0, 2555950, 65536, 0, 2555951, 65536, 0, 2555952, 65536, 0, 2555953, 65536, 0, 2555954, 65536, 0, 2555955, 65536, 0, 2555956, 65536, 0, 2555957, 65536, 0, 2555958, 65536, 0, 2555959, 65536, 0, 2555960, 65536, 0, 2555961, 65536, 0, 2555962, 65536, 0, 2555963, 65536, 0, 2555964, 65536, 0, 2555965, 65536, 0, 2555966, 65536, 0, 2555967, 65536, 0, 2555968, 65536, 0, 2555969, 65536, 0, 2555970, 65536, 0, 2555971, 65536, 0, 2555972, 65536, 0, 2555973, 65536, 0, 2555974, 65536, 0, 2555975, 65536, 0, 2621511, 65536, 1, 2621510, 65536, 1, 2621509, 65536, 1, 2621508, 65536, 1, 2621507, 65536, 1, 2621506, 65536, 1, 2621505, 65536, 1, 2621504, 65536, 1, 2621503, 65536, 1, 2621502, 65536, 1, 2621501, 65536, 1, 2621500, 65536, 1, 2621499, 65536, 1, 2621498, 65536, 1, 2621497, 65536, 1, 2621496, 65536, 1, 2621495, 65536, 1, 2621494, 65536, 1, 2621493, 65536, 1, 2621492, 65536, 1, 2621491, 65536, 1, 2621490, 65536, 1, 2621489, 65536, 1, 2621488, 65536, 1, 2621487, 65536, 1, 2621486, 65536, 1, 2621485, 65536, 1, 2621484, 65536, 1, 2621483, 65536, 1, 2621482, 65536, 1, 2621481, 65536, 1, 2621480, 65536, 1, 2621479, 65536, 1, 2621478, 65536, 1, 2621477, 65536, 1, 2621476, 65536, 1, 2621475, 65536, 1, 2621474, 65536, 1, 2621473, 65536, 1, 2621472, 65536, 1, 2621471, 65536, 1, 2621470, 65536, 1, 2621469, 65536, 1, 2621468, 65536, 1, 2621467, 65536, 1, 2621466, 65536, 1, 2621465, 65536, 1, 2621464, 65536, 1, 2621463, 65536, 1, 2621462, 65536, 1, 2621461, 65536, 1, 2621460, 65536, 1, 2621459, 65536, 1, 2621458, 65536, 1, 2621457, 65536, 1, 2621456, 65536, 1, 2621455, 65536, 1, 2621454, 65536, 1, 2621453, 65536, 1, 2621452, 65536, 1, 2621451, 65536, 1, 2621450, 65536, 1, 2621449, 65536, 1, 2621448, 65536, 1, 2621447, 65536, 1, 2621446, 65536, 1, 2621445, 65536, 1, 2621444, 65536, 1, 2621443, 65536, 1, 2621442, 65536, 1, 2621441, 65536, 1, 2621440, 65536, 1)
 
-[node name="quadrado_morte" parent="." instance=ExtResource("4_6at3r")]
+[node name="quadrado_morte" parent="." instance=ExtResource("5_rgg61")]
 position = Vector2(653, 583)
 
-[node name="Node2D" parent="." instance=ExtResource("5_13xja")]
+[node name="Node2D" parent="." instance=ExtResource("6_2ut3f")]
 position = Vector2(1214, 611)
 scale = Vector2(1.99923, 0.318135)
 
@@ -115,10 +115,3 @@ libraries = {
 "": SubResource("AnimationLibrary_uf8w3")
 }
 autoplay = "lateral"
-
-[node name="tempo" type="Label" parent="."]
-offset_left = 319.0
-offset_top = 465.0
-offset_right = 359.0
-offset_bottom = 488.0
-text = "text"

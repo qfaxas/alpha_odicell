@@ -13,4 +13,3 @@ func comeco(valor):
 
 func tempo_restante():
 	print(int(energia.time_left))
-	
