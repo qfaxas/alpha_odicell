@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=4 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://x5am5mog1v2d" path="res://assets/arte/lanterna.png" id="1_sp3t6"]
+[ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
 size = Vector2(19, 39)
 
 [node name="Personagem_principal" type="CharacterBody2D"]
+position = Vector2(0, -2)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -18,3 +20,7 @@ shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
+
+[node name="BateriaCheia" type="Sprite2D" parent="Camera2D"]
+position = Vector2(528, -283)
+texture = ExtResource("2_bv4xw")
