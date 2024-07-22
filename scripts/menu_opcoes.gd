@@ -1,7 +1,7 @@
 extends Control
 
 func _on_volume_button_pressed():
-	get_tree().change_scene_to_file("res://cenas/menu_principal.tscn")
+	get_tree().change_scene_to_file("res://cenas/menus/menu_principal.tscn")
 
 
 func _on_graphs_button_pressed():
@@ -13,4 +13,4 @@ func _on_control_remap_pressed():
 
 
 func _on_voltar_pressed():
-	get_tree().change_scene_to_file("res://cenas/menu_principal.tscn")
+	get_tree().change_scene_to_file("res://cenas/menus/menu_principal.tscn")
