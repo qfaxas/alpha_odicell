@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=6 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://x5am5mog1v2d" path="res://assets/arte/lanterna.png" id="1_sp3t6"]
 [ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
+[ext_resource type="AudioStream" uid="uid://bot7bf8uulcf8" path="res://assets/sfx/Movimentacao/jump.wav" id="3_jbw6n"]
+[ext_resource type="AudioStream" uid="uid://d0j758bcjuee6" path="res://assets/sfx/Movimentacao/step.wav" id="4_bcfcs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
 size = Vector2(19, 39)
@@ -24,3 +26,9 @@ position = Vector2(0, 2)
 [node name="BateriaCheia" type="Sprite2D" parent="Camera2D"]
 position = Vector2(528, -283)
 texture = ExtResource("2_bv4xw")
+
+[node name="Pulo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jbw6n")
+
+[node name="Passo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bcfcs")
