@@ -7,7 +7,6 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -27,5 +26,14 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	#teste de energia
+	if Autoload.escuro:
+		morrer()
+
+
+
+	
+
 func morrer():
 	get_tree().change_scene_to_file("res://cenas/menus/menu_morte.tscn")
+	
