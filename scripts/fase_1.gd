@@ -13,7 +13,8 @@ func _process(delta):
 
 #Menu de pause
 func _input(event):
-	if Input.is_action_just_pressed("esc"):
+	if Input.is_action_just_pressed("esc") and not get_tree().paused:
 		menu_pause.show()
-		get_tree().paused = true
+	elif Input.is_action_just_pressed("esc") and get_tree().paused:
+		menu_pause.hide()
 	 

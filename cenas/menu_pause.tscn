@@ -31,6 +31,8 @@ size_flags_vertical = 4
 
 [node name="resume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../back2menu")
+focus_neighbor_bottom = NodePath("../restart")
 text = "Resume"
 
 [node name="restart" type="Button" parent="MarginContainer/VBoxContainer"]
