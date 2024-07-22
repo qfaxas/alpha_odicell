@@ -1,7 +1,16 @@
 extends Node
 
-var fase1 = false
-var fase2 = false
-var fase3 = false
-var fase4 = false
-var fase5 = false
+@onready var energia = $Energia
+
+var escuro = false
+
+func _on_timer_timeout():
+	escuro = true
+
+func comeco(valor):
+	energia.wait_time = valor
+	energia.start()
+
+func tempo_restante():
+	print(int(energia.time_left))
+	
