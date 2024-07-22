@@ -6,7 +6,6 @@ var fase1 = true
 var fase2 = false
 var fase3 = false
 
-
 var escuro = false
 
 func _on_timer_timeout():
@@ -18,3 +17,5 @@ func comeco(valor):
 
 func tempo_restante():
 	print(int(energia.time_left))
+	
+
