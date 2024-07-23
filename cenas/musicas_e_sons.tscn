@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://djxyq0ai6m4i1"]
+
+[ext_resource type="Script" path="res://scripts/musicas_e_sons.gd" id="1_wubpc"]
+[ext_resource type="AudioStream" uid="uid://b1t3jxhc4te11" path="res://assets/sfx/Musica/Melodia_Piano_Loop.wav" id="2_s12c4"]
+
+[node name="musicas_e_sons" type="Node"]
+process_mode = 3
+script = ExtResource("1_wubpc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_s12c4")
+autoplay = true
+bus = &"musica"

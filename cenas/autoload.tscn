@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqfyavsevhcnd"]
+[gd_scene load_steps=2 format=3 uid="uid://cqfyavsevhcnd"]
 
 [ext_resource type="Script" path="res://scripts/autoload.gd" id="1_inq8a"]
-[ext_resource type="AudioStream" uid="uid://b1t3jxhc4te11" path="res://assets/sfx/Musica/Melodia_Piano_Loop.wav" id="2_awe2l"]
 
 [node name="autoload" type="Node"]
 script = ExtResource("1_inq8a")
@@ -9,11 +8,6 @@ script = ExtResource("1_inq8a")
 [node name="Energia" type="Timer" parent="."]
 wait_time = 15.0
 one_shot = true
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_awe2l")
-autoplay = true
-bus = &"musica"
 
 [connection signal="timeout" from="Energia" to="." method="_on_timer_timeout"]
 [connection signal="tree_entered" from="Energia" to="." method="_on_energia_tree_entered"]
