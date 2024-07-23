@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
 [ext_resource type="AudioStream" uid="uid://dgy55wxhbr8hh" path="res://assets/sfx/Movimentacao/jump.wav" id="3_jbw6n"]
 [ext_resource type="AudioStream" uid="uid://b7qdpjhwe1pi5" path="res://assets/sfx/Movimentacao/step.wav" id="4_bcfcs"]
-[ext_resource type="Texture2D" uid="uid://beqwmkurya7bl" path="res://assets/arte/luz_teste.png" id="5_ry107"]
+[ext_resource type="Texture2D" uid="uid://b5fbosduhl5vb" path="res://assets/arte/luz_média.png" id="5_bimda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
 size = Vector2(19, 39)
@@ -35,6 +35,8 @@ stream = ExtResource("3_jbw6n")
 stream = ExtResource("4_bcfcs")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-1, 2.00001)
+scale = Vector2(1.65625, 1.60742)
 blend_mode = 2
 shadow_enabled = true
-texture = ExtResource("5_ry107")
+texture = ExtResource("5_bimda")

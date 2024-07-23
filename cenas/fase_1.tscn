@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://ct3uhu1nqdoif"]
+[gd_scene load_steps=42 format=3 uid="uid://ct3uhu1nqdoif"]
 
 [ext_resource type="Script" path="res://scripts/fase_1.gd" id="1_4pemp"]
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="1_m7cyb"]
@@ -360,6 +360,9 @@ _data = {
 "fini": SubResource("Animation_4hfch")
 }
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u8jja"]
+polygon = PackedVector2Array(-876, -11, -846, -10, -848, -148, -875, -147)
+
 [node name="fase1" type="Node2D"]
 script = ExtResource("1_4pemp")
 
@@ -369,65 +372,14 @@ texture_repeat = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2759.0
+offset_left = -2860.0
 offset_top = -796.0
-offset_right = 453.0
+offset_right = 12867.0
 offset_bottom = 575.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_s2rj0")
-
-[node name="fundo2" type="TextureRect" parent="."]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 450.0
-offset_top = -802.0
-offset_right = 3662.0
-offset_bottom = 569.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_s2rj0")
-
-[node name="fundo3" type="TextureRect" parent="."]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 3643.0
-offset_top = -798.0
-offset_right = 6855.0
-offset_bottom = 573.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_s2rj0")
-
-[node name="fundo4" type="TextureRect" parent="."]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 6850.0
-offset_top = -798.0
-offset_right = 10062.0
-offset_bottom = 573.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_s2rj0")
-
-[node name="fundo5" type="TextureRect" parent="."]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10050.0
-offset_top = -794.0
-offset_right = 13262.0
-offset_bottom = 577.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_s2rj0")
+stretch_mode = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.158472, 0.158472, 0.158472, 1)
@@ -536,3 +488,6 @@ text = "FINAAAAAAAAAAAAAAAL"
 
 [node name="menu_pause" parent="CanvasLayer" instance=ExtResource("6_1m1bv")]
 visible = false
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_u8jja")
