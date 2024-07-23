@@ -6,10 +6,9 @@ var fase1 = true
 var fase2 = false
 var fase3 = false
 
-var escuro = false
 
 func _on_timer_timeout():
-	escuro = true
+	get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
 
 func comeco(valor):
 	energia.wait_time = valor

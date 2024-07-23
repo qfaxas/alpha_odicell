@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=8 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://x5am5mog1v2d" path="res://assets/arte/lanterna.png" id="1_sp3t6"]
 [ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
 [ext_resource type="AudioStream" uid="uid://dgy55wxhbr8hh" path="res://assets/sfx/Movimentacao/jump.wav" id="3_jbw6n"]
 [ext_resource type="AudioStream" uid="uid://b7qdpjhwe1pi5" path="res://assets/sfx/Movimentacao/step.wav" id="4_bcfcs"]
+[ext_resource type="Texture2D" uid="uid://cpk7m2rfvm1o1" path="res://assets/arte/luz_foda.png" id="5_wnt7h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
 size = Vector2(19, 39)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_70t06"]
+light_mode = 1
 
 [node name="Personagem_principal" type="CharacterBody2D"]
 position = Vector2(0, -2)
@@ -22,8 +26,11 @@ shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
+limit_left = -2200
+limit_bottom = 100
 
 [node name="BateriaCheia" type="Sprite2D" parent="Camera2D"]
+material = SubResource("CanvasItemMaterial_70t06")
 position = Vector2(528, -283)
 texture = ExtResource("2_bv4xw")
 
@@ -32,3 +39,10 @@ stream = ExtResource("3_jbw6n")
 
 [node name="Passo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_bcfcs")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-1, 2.00001)
+scale = Vector2(1.65625, 1.60742)
+blend_mode = 2
+shadow_enabled = true
+texture = ExtResource("5_wnt7h")
