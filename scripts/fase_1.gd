@@ -10,10 +10,3 @@ func _ready():
 	
 func _process(delta):
 	Autoload.tempo_restante()
-
-#Menu de pause
-func _input(event):
-	if Input.is_action_just_pressed("esc"):
-		menu_pause.show()
-		get_tree().paused = true
-	 

@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1jxpw8vdu2fs"]
+
+[ext_resource type="Script" path="res://scripts/menu_opcoes.gd" id="1_dp5ff"]
+
+[node name="menu_opcoes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dp5ff")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="volume_button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="graphs_button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Gráficos"
+
+[node name="control_remap" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Controles"
+
+[node name="voltar" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Voltar"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/volume_button" to="." method="_on_volume_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/graphs_button" to="." method="_on_graphs_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/control_remap" to="." method="_on_control_remap_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/voltar" to="." method="_on_voltar_pressed"]

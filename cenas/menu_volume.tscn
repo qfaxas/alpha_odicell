@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://csosqtad2m7nl"]
+
+[ext_resource type="Script" path="res://scripts/volume_master.gd" id="1_n8eoq"]
+[ext_resource type="Script" path="res://scripts/mute.gd" id="2_p6jsg"]
+[ext_resource type="Script" path="res://scripts/botao_voltar.gd" id="3_n0p4i"]
+
+[node name="menu_volume" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Geral"
+
+[node name="master" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("1_n8eoq")
+bus_name = "Master"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Música"
+
+[node name="musica" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("1_n8eoq")
+bus_name = "musica"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "VFX"
+
+[node name="efeitos" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("1_n8eoq")
+bus_name = "efeitos"
+
+[node name="mute" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Mutar Jogo"
+script = ExtResource("2_p6jsg")
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Voltar"
+script = ExtResource("3_n0p4i")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/mute" to="MarginContainer/VBoxContainer/master" method="_on_mute_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/mute" to="MarginContainer/VBoxContainer/mute" method="_on_pressed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/mute" to="MarginContainer/VBoxContainer/mute" method="_on_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="MarginContainer/VBoxContainer/master" method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="MarginContainer/VBoxContainer/Button" method="_on_pressed"]
