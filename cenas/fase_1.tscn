@@ -376,7 +376,6 @@ texture = ExtResource("2_s2rj0")
 stretch_mode = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]

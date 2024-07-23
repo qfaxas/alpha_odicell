@@ -26,6 +26,8 @@ shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
+limit_left = -2200
+limit_bottom = 100
 
 [node name="BateriaCheia" type="Sprite2D" parent="Camera2D"]
 material = SubResource("CanvasItemMaterial_70t06")
