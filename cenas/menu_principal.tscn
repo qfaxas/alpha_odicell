@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbsubf88c43i6"]
+[gd_scene load_steps=3 format=3 uid="uid://dbsubf88c43i6"]
 
 [ext_resource type="Script" path="res://scripts/menu_principal.gd" id="1_k1wqs"]
+[ext_resource type="Script" path="res://scripts/play_button.gd" id="2_3utgu"]
 
 [node name="menu_principal" type="Control"]
 layout_mode = 3
@@ -32,18 +33,27 @@ size_flags_vertical = 4
 
 [node name="play_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../exit_button")
+focus_neighbor_bottom = NodePath("../options_button")
 text = "Jogar"
+script = ExtResource("2_3utgu")
 
 [node name="options_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../play_button")
+focus_neighbor_bottom = NodePath("../credits_button")
 text = "Opções"
 
 [node name="credits_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../options_button")
+focus_neighbor_bottom = NodePath("../exit_button")
 text = "Créditos"
 
 [node name="exit_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../credits_button")
+focus_neighbor_bottom = NodePath("../play_button")
 text = "Sair do jogo"
 
 [node name="PanelContainer" type="PanelContainer" parent="."]

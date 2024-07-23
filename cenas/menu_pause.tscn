@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxq8hch18qwm6"]
+[gd_scene load_steps=3 format=3 uid="uid://dxq8hch18qwm6"]
 
 [ext_resource type="Script" path="res://scripts/menu_pause.gd" id="1_c7xod"]
+[ext_resource type="Script" path="res://scripts/resume_button.gd" id="2_ej6jr"]
 
 [node name="menu_pause" type="Control"]
 process_mode = 3
@@ -29,15 +30,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="resume" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="resume_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../back2menu")
 focus_neighbor_bottom = NodePath("../restart")
 text = "Resume"
+script = ExtResource("2_ej6jr")
 
 [node name="restart" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../resume")
+focus_neighbor_top = NodePath("../resume_button")
 focus_neighbor_bottom = NodePath("../options")
 text = "Reiniciar "
 
@@ -50,10 +52,10 @@ text = "Opções"
 [node name="back2menu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../options")
-focus_neighbor_bottom = NodePath("../resume")
+focus_neighbor_bottom = NodePath("../resume_button")
 text = "Voltar para o Menu"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/resume_button" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/back2menu" to="." method="_on_back_2_menu_pressed"]

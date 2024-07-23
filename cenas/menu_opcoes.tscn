@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1jxpw8vdu2fs"]
+[gd_scene load_steps=3 format=3 uid="uid://d1jxpw8vdu2fs"]
 
 [ext_resource type="Script" path="res://scripts/menu_opcoes.gd" id="1_dp5ff"]
+[ext_resource type="Script" path="res://scripts/volume_button.gd" id="2_6epo6"]
 
 [node name="menu_opcoes" type="Control"]
 layout_mode = 3
@@ -31,18 +32,27 @@ size_flags_vertical = 4
 
 [node name="volume_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../voltar")
+focus_neighbor_bottom = NodePath("../graphs_button")
 text = "Volume"
+script = ExtResource("2_6epo6")
 
 [node name="graphs_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../volume_button")
+focus_neighbor_bottom = NodePath("../control_remap")
 text = "Gráficos"
 
 [node name="control_remap" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../graphs_button")
+focus_neighbor_bottom = NodePath("../voltar")
 text = "Controles"
 
 [node name="voltar" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../control_remap")
+focus_neighbor_bottom = NodePath(".")
 text = "Voltar"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/volume_button" to="." method="_on_volume_button_pressed"]

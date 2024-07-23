@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4u8u7dadoalk"]
+[gd_scene load_steps=3 format=3 uid="uid://b4u8u7dadoalk"]
 
 [ext_resource type="Script" path="res://scripts/menu_morte.gd" id="1_33qw5"]
+[ext_resource type="Script" path="res://scripts/restart_button.gd" id="2_vi0yw"]
 
 [node name="menu_morte" type="Control"]
 layout_mode = 3
@@ -30,14 +31,21 @@ size_flags_vertical = 4
 
 [node name="restart" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../back")
+focus_neighbor_bottom = NodePath("../options")
 text = "Reiniciar"
+script = ExtResource("2_vi0yw")
 
 [node name="options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../restart")
+focus_neighbor_bottom = NodePath("../back")
 text = "Opções"
 
 [node name="back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../options")
+focus_neighbor_bottom = NodePath("../restart")
 text = "Voltar para o Menu"
 
 [node name="Label" type="Label" parent="MarginContainer"]
