@@ -1,13 +1,14 @@
 extends Control
 
 @onready var menu_pause = $"."
-
+@onready var resume_button = $MarginContainer/VBoxContainer/resume_button	
 
 func resume():
 	get_tree().paused = false
 	menu_pause.hide()
 	
 func pause():
+	resume_button.grab_focus()
 	get_tree().paused = true
 	menu_pause.show()
 	
