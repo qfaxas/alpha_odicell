@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1jxpw8vdu2fs"]
 
 [ext_resource type="Script" path="res://scripts/menu_opcoes.gd" id="1_dp5ff"]
-[ext_resource type="Script" path="res://scripts/volume_button.gd" id="2_6epo6"]
+[ext_resource type="Script" path="res://scripts/volume_button.gd" id="2_pdya7"]
 
 [node name="menu_opcoes" type="Control"]
 layout_mode = 3
@@ -35,7 +35,7 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../voltar")
 focus_neighbor_bottom = NodePath("../graphs_button")
 text = "Volume"
-script = ExtResource("2_6epo6")
+script = ExtResource("2_pdya7")
 
 [node name="graphs_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

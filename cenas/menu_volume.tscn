@@ -37,6 +37,8 @@ text = "Geral"
 
 [node name="master" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Button")
+focus_neighbor_bottom = NodePath("../musica")
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -49,6 +51,8 @@ text = "Música"
 
 [node name="musica" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../master")
+focus_neighbor_bottom = NodePath("../efeitos")
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -61,6 +65,8 @@ text = "VFX"
 
 [node name="efeitos" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../musica")
+focus_neighbor_bottom = NodePath("../mute")
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -69,12 +75,16 @@ bus_name = "efeitos"
 
 [node name="mute" type="CheckBox" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../efeitos")
+focus_neighbor_bottom = NodePath("../Button")
 text = "Mutar Jogo"
 script = ExtResource("2_p6jsg")
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../mute")
+focus_neighbor_bottom = NodePath("../master")
 text = "Voltar"
 script = ExtResource("3_n0p4i")
 
