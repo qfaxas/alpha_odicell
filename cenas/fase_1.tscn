@@ -1,24 +1,55 @@
-[gd_scene load_steps=31 format=3 uid="uid://ct3uhu1nqdoif"]
+[gd_scene load_steps=41 format=3 uid="uid://ct3uhu1nqdoif"]
 
 [ext_resource type="Script" path="res://scripts/fase_1.gd" id="1_4pemp"]
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="1_m7cyb"]
 [ext_resource type="PackedScene" uid="uid://c3so6flpnqijv" path="res://cenas/personagem_principal.tscn" id="2_k5bws"]
+[ext_resource type="Texture2D" uid="uid://bnj6exqhbiuvt" path="res://assets/arte/fundo.png" id="2_s2rj0"]
 [ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="3_yv432"]
 [ext_resource type="PackedScene" uid="uid://cgyudj2f6k7vh" path="res://cenas/quadrado_morte.tscn" id="4_qnqvr"]
 [ext_resource type="PackedScene" uid="uid://clf3apiofsvp6" path="res://cenas/plataforma.tscn" id="5_4mp1v"]
 [ext_resource type="PackedScene" uid="uid://dxq8hch18qwm6" path="res://cenas/menu_pause.tscn" id="6_1m1bv"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8rf0v"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_weqgl"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6lddb"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_585fv"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wt6o7"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rxg7m"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qaroa"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sfses"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_b1hua"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8xr7i"]
 texture = ExtResource("1_m7cyb")
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_8rf0v")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_585fv")
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_qaroa")
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -26,31 +57,40 @@ texture = ExtResource("1_m7cyb")
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
 0:1/0 = 0
+0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_weqgl")
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_wt6o7")
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_sfses")
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
+0:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_6lddb")
 0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:2/0/physics_layer_0/angular_velocity = 0.0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
+1:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_rxg7m")
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
+2:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_b1hua")
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
 2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_yufic"]
+uv_clipping = true
+occlusion_layer_0/light_mask = 1
+occlusion_layer_0/sdf_collision = true
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8xr7i")
 
@@ -322,6 +362,75 @@ _data = {
 
 [node name="fase1" type="Node2D"]
 script = ExtResource("1_4pemp")
+
+[node name="fundo1" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2759.0
+offset_top = -796.0
+offset_right = 453.0
+offset_bottom = 575.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s2rj0")
+
+[node name="fundo2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 450.0
+offset_top = -802.0
+offset_right = 3662.0
+offset_bottom = 569.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s2rj0")
+
+[node name="fundo3" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3643.0
+offset_top = -798.0
+offset_right = 6855.0
+offset_bottom = 573.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s2rj0")
+
+[node name="fundo4" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6850.0
+offset_top = -798.0
+offset_right = 10062.0
+offset_bottom = 573.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s2rj0")
+
+[node name="fundo5" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10050.0
+offset_top = -794.0
+offset_right = 13262.0
+offset_bottom = 577.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s2rj0")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.158472, 0.158472, 0.158472, 1)
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]
 position = Vector2(-2151, -4)
