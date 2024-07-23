@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cel417gghrxjl"]
+
+[ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="1_6udft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sru8"]
+size = Vector2(52, 33)
+
+[node name="plataforma peq" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6udft")
+region_enabled = true
+region_rect = Rect2(301.555, 115.054, 51.909, 33.5149)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_3sru8")
+one_way_collision = true
