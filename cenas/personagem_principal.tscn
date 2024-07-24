@@ -1,13 +1,99 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=20 format=3 uid="uid://c3so6flpnqijv"]
 
-[ext_resource type="Texture2D" uid="uid://x5am5mog1v2d" path="res://assets/arte/lanterna.png" id="1_sp3t6"]
+[ext_resource type="Texture2D" uid="uid://cm312adckubmc" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-03.png" id="1_lf5up"]
+[ext_resource type="Texture2D" uid="uid://bt17kt7ddeehg" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-01.png" id="2_7nv7j"]
 [ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
 [ext_resource type="AudioStream" uid="uid://dgy55wxhbr8hh" path="res://assets/sfx/Movimentacao/jump.wav" id="3_jbw6n"]
+[ext_resource type="Texture2D" uid="uid://cvca2hs3robee" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-02.png" id="3_pt4ix"]
 [ext_resource type="AudioStream" uid="uid://b7qdpjhwe1pi5" path="res://assets/sfx/Movimentacao/step.wav" id="4_bcfcs"]
+[ext_resource type="Texture2D" uid="uid://c05hgpb5t5lm8" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-04.png" id="4_myhh5"]
 [ext_resource type="Texture2D" uid="uid://cpk7m2rfvm1o1" path="res://assets/arte/luz_foda.png" id="5_wnt7h"]
+[ext_resource type="Texture2D" uid="uid://b1speeh86rnix" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-08.png" id="6_74hyt"]
+[ext_resource type="Texture2D" uid="uid://b1oxd827sk5xh" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-17.png" id="7_oisay"]
+[ext_resource type="Texture2D" uid="uid://b6e20olrjnnxu" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-09.png" id="8_eg7f1"]
+[ext_resource type="Texture2D" uid="uid://c8e1abw0jxma3" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-07.png" id="9_0ojr0"]
+[ext_resource type="Texture2D" uid="uid://ffc2101pt686" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-11.png" id="10_fcqb2"]
+[ext_resource type="Texture2D" uid="uid://da5n8jr6ap2bf" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-10.png" id="11_16sjw"]
+[ext_resource type="Texture2D" uid="uid://chn5cm0c8tn3d" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-15.png" id="12_nf6s7"]
+[ext_resource type="Texture2D" uid="uid://b2xa21oku1t5a" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-16.png" id="13_n1mch"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3a1gs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lf5up")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7nv7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pt4ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7nv7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_lf5up")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_myhh5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_74hyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oisay")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_eg7f1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0ojr0")
+}],
+"loop": true,
+"name": &"death",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_fcqb2")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_16sjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nf6s7")
+}],
+"loop": true,
+"name": &"nfs",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_n1mch")
+}],
+"loop": true,
+"name": &"stop",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
-size = Vector2(19, 39)
+size = Vector2(23.5, 40.5)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_70t06"]
 light_mode = 1
@@ -15,13 +101,16 @@ light_mode = 1
 [node name="Personagem_principal" type="CharacterBody2D"]
 position = Vector2(0, -2)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(3, -7)
 scale = Vector2(1.90625, 1.9375)
-texture = ExtResource("1_sp3t6")
+sprite_frames = SubResource("SpriteFrames_3a1gs")
+animation = &"stop"
+frame_progress = 0.981867
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.25, 0.75)
 shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -39,7 +128,7 @@ stream = ExtResource("3_jbw6n")
 stream = ExtResource("4_bcfcs")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-1, 2.00001)
+position = Vector2(1, 2)
 scale = Vector2(1.65625, 1.60742)
 blend_mode = 2
 shadow_enabled = true
