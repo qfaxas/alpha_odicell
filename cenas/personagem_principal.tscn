@@ -115,10 +115,12 @@ shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
+zoom = Vector2(0.5, 0.5)
 
-[node name="BateriaCheia" type="Sprite2D" parent="Camera2D"]
+[node name="BateriaCheia" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_70t06")
-position = Vector2(528, -283)
+position = Vector2(1100, -608)
+scale = Vector2(2.0625, 1.46875)
 texture = ExtResource("2_bv4xw")
 
 [node name="Pulo" type="AudioStreamPlayer" parent="."]
@@ -128,8 +130,8 @@ stream = ExtResource("3_jbw6n")
 stream = ExtResource("4_bcfcs")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1, 2)
-scale = Vector2(1.65625, 1.60742)
+position = Vector2(9.53674e-07, 1)
+scale = Vector2(2.22266, 2.11572)
 blend_mode = 2
 shadow_enabled = true
 texture = ExtResource("5_wnt7h")
