@@ -108,9 +108,9 @@ texture_filter = 1
 position = Vector2(3, -7)
 scale = Vector2(1.90625, 1.9375)
 sprite_frames = SubResource("SpriteFrames_3a1gs")
-animation = &"Run"
+animation = &"fall"
 autoplay = "Idle"
-frame_progress = 0.474158
+frame_progress = 0.48141
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, -12.5)
@@ -133,8 +133,8 @@ stream = ExtResource("3_jbw6n")
 stream = ExtResource("4_bcfcs")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(9.53674e-07, 1)
-scale = Vector2(2.22266, 2.11572)
+position = Vector2(-1.00002, 3.00006)
+scale = Vector2(3.1875, 3.03414)
 blend_mode = 2
 shadow_enabled = true
 texture = ExtResource("5_wnt7h")
