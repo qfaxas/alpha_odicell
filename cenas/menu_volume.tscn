@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://csosqtad2m7nl"]
+[gd_scene load_steps=6 format=3 uid="uid://csosqtad2m7nl"]
 
 [ext_resource type="Script" path="res://scripts/volume_master.gd" id="1_n8eoq"]
+[ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="1_xepoo"]
 [ext_resource type="Script" path="res://scripts/mute.gd" id="2_p6jsg"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="3_36yv4"]
 [ext_resource type="Script" path="res://scripts/botao_voltar.gd" id="3_n0p4i"]
@@ -13,6 +14,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xepoo")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -30,7 +41,7 @@ metadata/_edit_lock_ = true
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_constants/separation = 10
+theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -78,6 +89,7 @@ bus_name = "efeitos"
 layout_mode = 2
 focus_neighbor_top = NodePath("../efeitos")
 focus_neighbor_bottom = NodePath("../Button")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Mutar Jogo"
 script = ExtResource("2_p6jsg")
 
