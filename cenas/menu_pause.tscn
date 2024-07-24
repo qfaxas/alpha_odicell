@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxq8hch18qwm6"]
+[gd_scene load_steps=4 format=3 uid="uid://dxq8hch18qwm6"]
 
 [ext_resource type="Script" path="res://scripts/menu_pause.gd" id="1_c7xod"]
 [ext_resource type="Script" path="res://scripts/resume_button.gd" id="2_ej6jr"]
+[ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_gkw8a"]
 
 [node name="menu_pause" type="Control"]
 process_mode = 3
@@ -29,11 +30,13 @@ theme_override_constants/margin_bottom = 64
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 16
 
 [node name="resume_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../back2menu")
 focus_neighbor_bottom = NodePath("../restart")
+theme = ExtResource("2_gkw8a")
 text = "Resume"
 script = ExtResource("2_ej6jr")
 
@@ -41,18 +44,21 @@ script = ExtResource("2_ej6jr")
 layout_mode = 2
 focus_neighbor_top = NodePath("../resume_button")
 focus_neighbor_bottom = NodePath("../options")
+theme = ExtResource("2_gkw8a")
 text = "Reiniciar "
 
 [node name="options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../restart")
 focus_neighbor_bottom = NodePath("../back2menu")
+theme = ExtResource("2_gkw8a")
 text = "Opções"
 
 [node name="back2menu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../options")
 focus_neighbor_bottom = NodePath("../resume_button")
+theme = ExtResource("2_gkw8a")
 text = "Voltar para o Menu"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/resume_button" to="." method="_on_resume_pressed"]

@@ -93,7 +93,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
-size = Vector2(23.5, 40.5)
+size = Vector2(97, 177)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_70t06"]
 light_mode = 1
@@ -110,7 +110,7 @@ animation = &"stop"
 frame_progress = 0.981867
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.25, 0.75)
+position = Vector2(3.5, -12.5)
 shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]

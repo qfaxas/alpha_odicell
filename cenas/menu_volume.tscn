@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://csosqtad2m7nl"]
+[gd_scene load_steps=5 format=3 uid="uid://csosqtad2m7nl"]
 
 [ext_resource type="Script" path="res://scripts/volume_master.gd" id="1_n8eoq"]
 [ext_resource type="Script" path="res://scripts/mute.gd" id="2_p6jsg"]
+[ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="3_36yv4"]
 [ext_resource type="Script" path="res://scripts/botao_voltar.gd" id="3_n0p4i"]
 
 [node name="menu_volume" type="Control"]
@@ -85,6 +86,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_top = NodePath("../mute")
 focus_neighbor_bottom = NodePath("../master")
+theme = ExtResource("3_36yv4")
 text = "Voltar"
 script = ExtResource("3_n0p4i")
 

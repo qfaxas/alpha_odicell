@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1jxpw8vdu2fs"]
+[gd_scene load_steps=4 format=3 uid="uid://d1jxpw8vdu2fs"]
 
 [ext_resource type="Script" path="res://scripts/menu_opcoes.gd" id="1_dp5ff"]
+[ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_8v721"]
 [ext_resource type="Script" path="res://scripts/volume_button.gd" id="2_pdya7"]
 
 [node name="menu_opcoes" type="Control"]
@@ -29,11 +30,13 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 16
 
 [node name="volume_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../voltar")
 focus_neighbor_bottom = NodePath("../graphs_button")
+theme = ExtResource("2_8v721")
 text = "Volume"
 script = ExtResource("2_pdya7")
 
@@ -41,18 +44,21 @@ script = ExtResource("2_pdya7")
 layout_mode = 2
 focus_neighbor_top = NodePath("../volume_button")
 focus_neighbor_bottom = NodePath("../control_remap")
+theme = ExtResource("2_8v721")
 text = "Gráficos"
 
 [node name="control_remap" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../graphs_button")
 focus_neighbor_bottom = NodePath("../voltar")
+theme = ExtResource("2_8v721")
 text = "Controles"
 
 [node name="voltar" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../control_remap")
 focus_neighbor_bottom = NodePath(".")
+theme = ExtResource("2_8v721")
 text = "Voltar"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/volume_button" to="." method="_on_volume_button_pressed"]

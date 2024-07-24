@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4u8u7dadoalk"]
+[gd_scene load_steps=4 format=3 uid="uid://b4u8u7dadoalk"]
 
 [ext_resource type="Script" path="res://scripts/menu_morte.gd" id="1_33qw5"]
+[ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_2iacn"]
 [ext_resource type="Script" path="res://scripts/restart_button.gd" id="2_vi0yw"]
 
 [node name="menu_morte" type="Control"]
@@ -28,11 +29,13 @@ theme_override_constants/margin_bottom = 128
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 16
 
 [node name="restart" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../back")
 focus_neighbor_bottom = NodePath("../options")
+theme = ExtResource("2_2iacn")
 text = "Reiniciar"
 script = ExtResource("2_vi0yw")
 
@@ -40,12 +43,14 @@ script = ExtResource("2_vi0yw")
 layout_mode = 2
 focus_neighbor_top = NodePath("../restart")
 focus_neighbor_bottom = NodePath("../back")
+theme = ExtResource("2_2iacn")
 text = "Opções"
 
 [node name="back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../options")
 focus_neighbor_bottom = NodePath("../restart")
+theme = ExtResource("2_2iacn")
 text = "Voltar para o Menu"
 
 [node name="Label" type="Label" parent="MarginContainer"]
