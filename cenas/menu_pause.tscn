@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxq8hch18qwm6"]
+[gd_scene load_steps=4 format=3 uid="uid://dxq8hch18qwm6"]
 
 [ext_resource type="Script" path="res://scripts/menu_pause.gd" id="1_c7xod"]
 [ext_resource type="Script" path="res://scripts/resume_button.gd" id="2_ej6jr"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_gkw8a"]
-[ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="2_vay3l"]
 
 [node name="menu_pause" type="Control"]
 process_mode = 3
@@ -14,16 +13,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c7xod")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_vay3l")
-expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

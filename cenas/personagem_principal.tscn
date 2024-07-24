@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=21 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://cm312adckubmc" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-03.png" id="1_lf5up"]
+[ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="1_vewkd"]
 [ext_resource type="Texture2D" uid="uid://bt17kt7ddeehg" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-01.png" id="2_7nv7j"]
 [ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
 [ext_resource type="AudioStream" uid="uid://dgy55wxhbr8hh" path="res://assets/sfx/Movimentacao/jump.wav" id="3_jbw6n"]
@@ -40,7 +41,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 3.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -51,7 +52,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -93,24 +94,26 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
-size = Vector2(97, 177)
+size = Vector2(74, 177)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_70t06"]
 light_mode = 1
 
 [node name="Personagem_principal" type="CharacterBody2D"]
 position = Vector2(0, -2)
+script = ExtResource("1_vewkd")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(3, -7)
 scale = Vector2(1.90625, 1.9375)
 sprite_frames = SubResource("SpriteFrames_3a1gs")
-animation = &"stop"
-frame_progress = 0.981867
+animation = &"Run"
+autoplay = "Idle"
+frame_progress = 0.474158
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.5, -12.5)
+position = Vector2(3, -12.5)
 shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]
