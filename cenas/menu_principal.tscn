@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbsubf88c43i6"]
+[gd_scene load_steps=4 format=3 uid="uid://dbsubf88c43i6"]
 
 [ext_resource type="Script" path="res://scripts/menu_principal.gd" id="1_k1wqs"]
 [ext_resource type="Script" path="res://scripts/play_button.gd" id="2_3utgu"]
+[ext_resource type="Texture2D" uid="uid://bnj6exqhbiuvt" path="res://assets/arte/fundo.png" id="2_ql82d"]
 
 [node name="menu_principal" type="Control"]
 layout_mode = 3
@@ -12,6 +13,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k1wqs")
 metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ql82d")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
