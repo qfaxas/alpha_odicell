@@ -8,9 +8,7 @@ const JUMP_VELOCITY = -550.0
 @onready var energia = $energia
 @onready var luz = $PointLight2D
 
-
-
-var bateria :int = 4
+static var bateria :int = 4
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -77,7 +75,8 @@ func _physics_process(delta):
 		bateria = 4
 		
 
-
+static func recarga():
+	bateria += 1
 
 func morrer():
 	get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")

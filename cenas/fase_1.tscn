@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://ct3uhu1nqdoif"]
+[gd_scene load_steps=49 format=3 uid="uid://ct3uhu1nqdoif"]
 
 [ext_resource type="Script" path="res://scripts/fase_1.gd" id="1_4pemp"]
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="1_m7cyb"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dxq8hch18qwm6" path="res://cenas/menu_pause.tscn" id="6_1m1bv"]
 [ext_resource type="PackedScene" path="res://cenas/plataformaspriteteste.tscn" id="7_y6ka1"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="9_pnue8"]
+[ext_resource type="PackedScene" uid="uid://c57uxl6p6u2wj" path="res://cenas/recargas.tscn" id="11_58oqi"]
 
 [sub_resource type="Animation" id="Animation_xk8nd"]
 length = 0.001
@@ -573,3 +574,6 @@ offset_top = -1590.0
 offset_right = 26726.0
 offset_bottom = -1424.0
 text = "porta"
+
+[node name="recargas" parent="." instance=ExtResource("11_58oqi")]
+position = Vector2(-248, 566)
