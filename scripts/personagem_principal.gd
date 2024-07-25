@@ -75,9 +75,10 @@ func _physics_process(delta):
 		bateria = 4
 		
 
-static func recarga():
+func recarga():
 	bateria += 1
-
+	energia.start()
+	
 func morrer():
 	get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
 
