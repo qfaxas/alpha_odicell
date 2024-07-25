@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=21 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://cm312adckubmc" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-03.png" id="1_lf5up"]
 [ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="1_vewkd"]
@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://da5n8jr6ap2bf" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-10.png" id="11_16sjw"]
 [ext_resource type="Texture2D" uid="uid://chn5cm0c8tn3d" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-15.png" id="12_nf6s7"]
 [ext_resource type="Texture2D" uid="uid://b2xa21oku1t5a" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-16.png" id="13_n1mch"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_44fmv"]
+light_mode = 1
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3a1gs"]
 animations = [{
@@ -101,10 +104,12 @@ position = Vector2(0, -2)
 script = ExtResource("1_vewkd")
 
 [node name="bateria_atual" type="TextureRect" parent="."]
-offset_left = 937.0
-offset_top = -613.0
-offset_right = 1109.0
-offset_bottom = -482.0
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_44fmv")
+offset_left = 949.0
+offset_top = -619.0
+offset_right = 1124.0
+offset_bottom = -479.0
 texture = ExtResource("2_bv4xw")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
