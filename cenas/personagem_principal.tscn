@@ -127,7 +127,7 @@ shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.35, 0.35)
 
 [node name="Pulo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jbw6n")
