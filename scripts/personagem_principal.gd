@@ -3,13 +3,19 @@ extends CharacterBody2D
 
 const SPEED = 700.0
 const JUMP_VELOCITY = -550.0
-const Autoload = preload("res://scripts/autoload.gd")
 @onready var sprite_2d = $Sprite2D
+@onready var bateria_atual = $bateria_atual
+@onready var energia = $energia
+
+
+var bateria :int = 4
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready():
+	energia.start()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -47,5 +53,29 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	#checa o status da bateira
+	if (bateria == 4):
+		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_cheia.png")
+	
+	elif (bateria == 3):
+		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_75.png")
+	
+	elif (bateria == 2):
+		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_50.png")
+		
+	elif (bateria == 1):
+		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_25.png")
+	
+	if (bateria == 0):
+		morrer()
+		bateria = 4
+
+
+
 func morrer():
 	get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
+
+
+func _on_energia_timeout():
+	bateria -= 1
+	energia.start()

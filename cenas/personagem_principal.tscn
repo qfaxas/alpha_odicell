@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=20 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://cm312adckubmc" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-03.png" id="1_lf5up"]
 [ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="1_vewkd"]
@@ -94,14 +94,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
-size = Vector2(74, 177)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_70t06"]
-light_mode = 1
+size = Vector2(99, 177)
 
 [node name="Personagem_principal" type="CharacterBody2D"]
 position = Vector2(0, -2)
 script = ExtResource("1_vewkd")
+
+[node name="bateria_atual" type="TextureRect" parent="."]
+offset_left = 937.0
+offset_top = -613.0
+offset_right = 1109.0
+offset_bottom = -482.0
+texture = ExtResource("2_bv4xw")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -113,18 +117,12 @@ autoplay = "Idle"
 frame_progress = 0.48141
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, -12.5)
+position = Vector2(1.5, -12.5)
 shape = SubResource("RectangleShape2D_0xoje")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
 zoom = Vector2(0.5, 0.5)
-
-[node name="BateriaCheia" type="Sprite2D" parent="."]
-material = SubResource("CanvasItemMaterial_70t06")
-position = Vector2(1100, -608)
-scale = Vector2(2.0625, 1.46875)
-texture = ExtResource("2_bv4xw")
 
 [node name="Pulo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jbw6n")
@@ -138,3 +136,8 @@ scale = Vector2(3.1875, 3.03414)
 blend_mode = 2
 shadow_enabled = true
 texture = ExtResource("5_wnt7h")
+
+[node name="energia" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="energia" to="." method="_on_energia_timeout"]

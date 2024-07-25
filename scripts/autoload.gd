@@ -14,7 +14,4 @@ func comeco(valor):
 	energia.wait_time = valor
 	energia.start()
 
-func tempo_restante():
-	print(int(energia.time_left))
-	
 

@@ -5,5 +5,4 @@ extends Node2D
 func _ready():
 	Autoload.comeco(120)
 	
-func _process(delta):
-	Autoload.tempo_restante()
+
