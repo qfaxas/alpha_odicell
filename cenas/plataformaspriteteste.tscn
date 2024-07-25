@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://v40oxbfsuguw"]
+[gd_scene load_steps=6 format=3 uid="uid://v40oxbfsuguw"]
 
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="1_m0m3h"]
+[ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="2_td38r"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_w0hjj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h74xt"]
 size = Vector2(131, 34)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k0kuq"]
+polygon = PackedVector2Array(-7.34711, -10.6667, -7.34711, 10.6667, 7.23141, 10.6667, 7.23141, -1.52588e-05)
 
 [node name="plataformaspriteteste" type="AnimatableBody2D"]
 
@@ -14,7 +20,20 @@ texture = ExtResource("1_m0m3h")
 region_enabled = true
 region_rect = Rect2(357.85, 112.802, 131.769, 36.6025)
 
+[node name="refletor" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_w0hjj")
+position = Vector2(-0.500001, 16)
+scale = Vector2(8.64286, 0.09375)
+texture = ExtResource("2_td38r")
+region_enabled = true
+region_rect = Rect2(81, 0, 14.9747, 16.0754)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_h74xt")
 one_way_collision = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-0.500001, 16)
+scale = Vector2(8.64286, 0.09375)
+occluder = SubResource("OccluderPolygon2D_k0kuq")
