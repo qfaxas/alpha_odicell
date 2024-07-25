@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://ct3uhu1nqdoif"]
+[gd_scene load_steps=52 format=3 uid="uid://ct3uhu1nqdoif"]
 
 [ext_resource type="Script" path="res://scripts/fase_1.gd" id="1_4pemp"]
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="1_m7cyb"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" path="res://cenas/plataformaspriteteste.tscn" id="7_y6ka1"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="9_pnue8"]
 [ext_resource type="PackedScene" uid="uid://c57uxl6p6u2wj" path="res://cenas/recargas.tscn" id="11_58oqi"]
+[ext_resource type="PackedScene" uid="uid://wvfsqg2uhupc" path="res://cenas/checkpoint.tscn" id="12_df8hd"]
+[ext_resource type="Script" path="res://scripts/borda.gd" id="13_catd0"]
 
 [sub_resource type="Animation" id="Animation_xk8nd"]
 length = 0.001
@@ -417,6 +419,9 @@ tile_size = Vector2i(72, 66)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vfusm")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_66ife"]
+distance = -1274.0
+
 [node name="fase1" type="Node2D"]
 script = ExtResource("1_4pemp")
 
@@ -452,10 +457,11 @@ texture = ExtResource("4_jdjm2")
 stretch_mode = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]
-position = Vector2(-2325, 72)
+position = Vector2(-2490, 284)
 
 [node name="quadrado_morte" parent="." instance=ExtResource("4_qnqvr")]
 position = Vector2(653, 583)
@@ -576,3 +582,14 @@ text = "porta"
 
 [node name="recargas" parent="." instance=ExtResource("11_58oqi")]
 position = Vector2(-248, 566)
+
+[node name="checkpoint" parent="." instance=ExtResource("12_df8hd")]
+position = Vector2(1132, 451)
+
+[node name="borda" type="Area2D" parent="."]
+script = ExtResource("13_catd0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borda"]
+shape = SubResource("WorldBoundaryShape2D_66ife")
+
+[connection signal="body_entered" from="borda" to="." method="_on_borda_body_entered"]

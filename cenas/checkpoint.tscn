@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://wvfsqg2uhupc"]
+
+[ext_resource type="Texture2D" uid="uid://bp685fc3bc7l7" path="res://assets/arte/checkpoint.png" id="1_a05bw"]
+[ext_resource type="Script" path="res://scripts/checkpoint.gd" id="1_pe1tr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6oqny"]
+size = Vector2(36, 22)
+
+[node name="checkpoint" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_pe1tr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_a05bw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_6oqny")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

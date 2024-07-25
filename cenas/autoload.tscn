@@ -4,9 +4,3 @@
 
 [node name="autoload" type="Node"]
 script = ExtResource("1_inq8a")
-
-[node name="Energia" type="Timer" parent="."]
-wait_time = 15.0
-
-[connection signal="timeout" from="Energia" to="." method="_on_timer_timeout"]
-[connection signal="tree_entered" from="Energia" to="." method="_on_energia_tree_entered"]

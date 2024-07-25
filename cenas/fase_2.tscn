@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/fase_1.gd" id="1_tit0r"]
 [ext_resource type="Texture2D" uid="uid://bnj6exqhbiuvt" path="res://assets/arte/fundo.png" id="1_vcrsa"]
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="2_nc1fr"]
-[ext_resource type="PackedScene" uid="uid://v40oxbfsuguw" path="res://cenas/plataformaspriteteste.tscn" id="3_50ubh"]
+[ext_resource type="PackedScene" path="res://cenas/plataformaspriteteste.tscn" id="3_50ubh"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="4_ridnp"]
 [ext_resource type="PackedScene" uid="uid://c3so6flpnqijv" path="res://cenas/personagem_principal.tscn" id="6_rsram"]
 
