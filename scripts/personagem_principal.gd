@@ -4,8 +4,10 @@ extends CharacterBody2D
 const SPEED = 700.0
 const JUMP_VELOCITY = -550.0
 @onready var sprite_2d = $Sprite2D
-@onready var bateria_atual = $bateria_atual
+@onready var bateria_atual = $CanvasLayer/bateria_atual
 @onready var energia = $energia
+@onready var luz = $PointLight2D
+
 
 
 var bateria :int = 4
@@ -56,19 +58,24 @@ func _physics_process(delta):
 	#checa o status da bateira
 	if (bateria == 4):
 		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_cheia.png")
+		luz.texture_scale = 1.5
 	
 	elif (bateria == 3):
 		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_75.png")
+		luz.texture_scale = 1.25
 	
 	elif (bateria == 2):
 		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_50.png")
+		luz.texture_scale = 1
 		
 	elif (bateria == 1):
 		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_25.png")
+		luz.texture_scale = 0.75
 	
 	if (bateria == 0):
 		morrer()
 		bateria = 4
+		
 
 
 

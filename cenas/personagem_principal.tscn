@@ -103,13 +103,16 @@ size = Vector2(99, 177)
 position = Vector2(0, -2)
 script = ExtResource("1_vewkd")
 
-[node name="bateria_atual" type="TextureRect" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 12
+
+[node name="bateria_atual" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_44fmv")
-offset_left = 949.0
-offset_top = -619.0
-offset_right = 1124.0
-offset_bottom = -479.0
+offset_left = -1817.0
+offset_top = 137.0
+offset_right = -1642.0
+offset_bottom = 277.0
 texture = ExtResource("2_bv4xw")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
@@ -120,14 +123,17 @@ sprite_frames = SubResource("SpriteFrames_3a1gs")
 animation = &"fall"
 autoplay = "Idle"
 frame_progress = 0.48141
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -12.5)
 shape = SubResource("RectangleShape2D_0xoje")
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
 zoom = Vector2(0.35, 0.35)
+metadata/_edit_lock_ = true
 
 [node name="Pulo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jbw6n")
@@ -141,6 +147,8 @@ scale = Vector2(3.1875, 3.03414)
 blend_mode = 2
 shadow_enabled = true
 texture = ExtResource("5_wnt7h")
+texture_scale = 1.5
+metadata/_edit_lock_ = true
 
 [node name="energia" type="Timer" parent="."]
 wait_time = 3.0
