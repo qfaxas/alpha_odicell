@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dend3ntik26nn" path="res://assets/arte/estrelas.png" id="4_jdjm2"]
 [ext_resource type="PackedScene" uid="uid://cgyudj2f6k7vh" path="res://cenas/quadrado_morte.tscn" id="4_qnqvr"]
 [ext_resource type="PackedScene" uid="uid://dxq8hch18qwm6" path="res://cenas/menu_pause.tscn" id="6_1m1bv"]
-[ext_resource type="PackedScene" uid="uid://v40oxbfsuguw" path="res://cenas/plataformaspriteteste.tscn" id="7_y6ka1"]
+[ext_resource type="PackedScene" path="res://cenas/plataformaspriteteste.tscn" id="7_y6ka1"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="9_pnue8"]
 
 [sub_resource type="Animation" id="Animation_xk8nd"]
@@ -425,7 +425,7 @@ texture_repeat = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3852.0
+offset_left = -13487.0
 offset_top = -796.0
 offset_right = 51551.0
 offset_bottom = 575.0
@@ -435,15 +435,15 @@ texture = ExtResource("2_s2rj0")
 stretch_mode = 1
 
 [node name="fundo_verde" type="TextureRect" parent="."]
-offset_left = -3853.0
+offset_left = -13443.0
 offset_top = 536.0
 offset_right = 51540.0
-offset_bottom = 1448.0
+offset_bottom = 3349.0
 texture = ExtResource("3_0ayl7")
 stretch_mode = 1
 
 [node name="fundo_verde2" type="TextureRect" parent="."]
-offset_left = -3856.0
+offset_left = -13582.0
 offset_top = -4701.0
 offset_right = 51609.0
 offset_bottom = -796.0

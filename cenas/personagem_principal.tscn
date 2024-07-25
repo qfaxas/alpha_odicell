@@ -109,11 +109,14 @@ layer = 12
 [node name="bateria_atual" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_44fmv")
-offset_left = -1817.0
-offset_top = 137.0
-offset_right = -1642.0
-offset_bottom = 277.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -127.0
+offset_bottom = 110.0
+grow_horizontal = 0
 texture = ExtResource("2_bv4xw")
+expand_mode = 2
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
