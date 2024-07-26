@@ -12,3 +12,8 @@ func _enter_tree():
 func _on_borda_body_entered(body):
 	if (body.name == "Personagem_principal"):
 		get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
+
+
+func _on_deadzone_body_entered(body):
+	if (body.name == "Personagem_principal"):
+		get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")

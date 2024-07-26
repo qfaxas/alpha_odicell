@@ -4,6 +4,8 @@ extends Area2D
 @onready var label = $Label
 @onready var fechado = $fechado
 @onready var aberto = $aberto
+@onready var luz = $intrans/LightOccluder2D
+
 
 const PersonagemPrincipal = preload("res://scripts/personagem_principal.gd")
 
@@ -15,6 +17,7 @@ func _process(delta):
 			fechado.hide()
 			aberto.show()
 			PersonagemPrincipal.bateria -= 1
+			luz.hide()
 
 func _on_body_entered(body):
 	if (body.name == "Personagem_principal"):
