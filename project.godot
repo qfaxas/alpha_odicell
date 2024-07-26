@@ -79,6 +79,10 @@ esc={
 ]
 }
 
+[physics]
+
+2d/default_gravity=1200.0
+
 [rendering]
 
 renderer/rendering_method="mobile"

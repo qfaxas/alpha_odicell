@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://ct3uhu1nqdoif"]
+[gd_scene load_steps=50 format=3 uid="uid://ct3uhu1nqdoif"]
 
 [ext_resource type="Script" path="res://scripts/fase_1.gd" id="1_4pemp"]
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="1_m7cyb"]
@@ -69,7 +69,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_5u616"]
 resource_name = "assdas"
-length = 2.0
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -78,7 +78,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
+"times": PackedFloat32Array(1, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(15827, 72), Vector2(17704, 72)]
@@ -88,44 +88,6 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_2p8rw"),
 "assdas": SubResource("Animation_5u616")
-}
-
-[sub_resource type="Animation" id="Animation_2r2av"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(24723, 68)]
-}
-
-[sub_resource type="Animation" id="Animation_dtkkl"]
-resource_name = "cim"
-length = 2.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(24723, 68), Vector2(24723, -1432)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rewom"]
-_data = {
-"RESET": SubResource("Animation_2r2av"),
-"cim": SubResource("Animation_dtkkl")
 }
 
 [sub_resource type="Animation" id="Animation_bkb36"]
@@ -145,7 +107,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_ojb7g"]
 resource_name = "df"
-length = 2.0
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -154,15 +116,33 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
+"times": PackedFloat32Array(0.979672, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(27334, -1363), Vector2(27334, 93.9998)]
+"values": [Vector2(27334, -1363), Vector2(27334, 92.9999)]
+}
+
+[sub_resource type="Animation" id="Animation_mwqg5"]
+resource_name = "asima kkkkkkk"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(24783, 112), Vector2(24783, -1456)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2jnkj"]
 _data = {
 "RESET": SubResource("Animation_bkb36"),
+"asima kkkkkkk": SubResource("Animation_mwqg5"),
 "df": SubResource("Animation_ojb7g")
 }
 
@@ -183,7 +163,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_gcbvd"]
 resource_name = "df2"
-length = 2.0
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -192,7 +172,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
+"times": PackedFloat32Array(1, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(29826, 94), Vector2(27781, 94)]
@@ -259,7 +239,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_7b10b"]
 resource_name = "finalzin"
-length = 2.0
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -268,7 +248,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
+"times": PackedFloat32Array(1, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(47096, -1572), Vector2(48355, -1572)]
@@ -461,7 +441,7 @@ visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]
-position = Vector2(-2490, 284)
+position = Vector2(-2582, 389)
 
 [node name="quadrado_morte" parent="." instance=ExtResource("4_qnqvr")]
 position = Vector2(653, 583)
@@ -488,16 +468,6 @@ libraries = {
 }
 autoplay = "assdas"
 
-[node name="plataformaspriteteste3" parent="plataformas" instance=ExtResource("7_y6ka1")]
-position = Vector2(24723, 68)
-scale = Vector2(3.85784, -2.39443)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste3"]
-libraries = {
-"": SubResource("AnimationLibrary_rewom")
-}
-autoplay = "cim"
-
 [node name="plataformaspriteteste4" parent="plataformas" instance=ExtResource("7_y6ka1")]
 position = Vector2(27334, -1363)
 scale = Vector2(3.28, 2.52)
@@ -507,6 +477,16 @@ libraries = {
 "": SubResource("AnimationLibrary_2jnkj")
 }
 autoplay = "df"
+
+[node name="plataformaspriteteste8" parent="plataformas" instance=ExtResource("7_y6ka1")]
+position = Vector2(27334, -1363)
+scale = Vector2(3.28, 2.52)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste8"]
+libraries = {
+"": SubResource("AnimationLibrary_2jnkj")
+}
+autoplay = "asima kkkkkkk"
 
 [node name="plataformaspriteteste5" parent="plataformas" instance=ExtResource("7_y6ka1")]
 position = Vector2(27781, 94)
@@ -581,13 +561,43 @@ offset_bottom = -1424.0
 text = "porta"
 
 [node name="recargas" parent="." instance=ExtResource("11_58oqi")]
-position = Vector2(-248, 566)
+position = Vector2(4798, 290)
 
 [node name="recargas2" parent="." instance=ExtResource("11_58oqi")]
-position = Vector2(509, 317)
+position = Vector2(18844, 57)
+
+[node name="recargas5" parent="." instance=ExtResource("11_58oqi")]
+position = Vector2(26184, -1797)
+
+[node name="recargas8" parent="." instance=ExtResource("11_58oqi")]
+position = Vector2(30673, -3233)
+
+[node name="recargas7" parent="." instance=ExtResource("11_58oqi")]
+position = Vector2(44412, -1816)
+
+[node name="recargas6" parent="." instance=ExtResource("11_58oqi")]
+position = Vector2(37697, -3239)
+
+[node name="recargas3" parent="." instance=ExtResource("11_58oqi")]
+position = Vector2(10069, -97)
+
+[node name="recargas4" parent="." instance=ExtResource("11_58oqi")]
+position = Vector2(35738, -106)
 
 [node name="checkpoint" parent="." instance=ExtResource("12_df8hd")]
 position = Vector2(1132, 451)
+
+[node name="checkpoint2" parent="." instance=ExtResource("12_df8hd")]
+position = Vector2(15407, 13)
+
+[node name="checkpoint3" parent="." instance=ExtResource("12_df8hd")]
+position = Vector2(25751, -1568)
+
+[node name="checkpoint4" parent="." instance=ExtResource("12_df8hd")]
+position = Vector2(37787, -3156)
+
+[node name="checkpoint5" parent="." instance=ExtResource("12_df8hd")]
+position = Vector2(36859, -377)
 
 [node name="borda" type="Area2D" parent="."]
 script = ExtResource("13_catd0")
