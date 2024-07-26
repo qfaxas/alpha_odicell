@@ -140,9 +140,11 @@ metadata/_edit_lock_ = true
 
 [node name="Pulo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jbw6n")
+bus = &"efeitos"
 
 [node name="Passo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_bcfcs")
+bus = &"efeitos"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-1.00002, 3.00006)
