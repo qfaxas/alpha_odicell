@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://dend3ntik26nn" path="res://assets/arte/estrelas.png" id="4_jdjm2"]
 [ext_resource type="PackedScene" uid="uid://cgyudj2f6k7vh" path="res://cenas/quadrado_morte.tscn" id="4_qnqvr"]
 [ext_resource type="PackedScene" uid="uid://dxq8hch18qwm6" path="res://cenas/menu_pause.tscn" id="6_1m1bv"]
-[ext_resource type="PackedScene" path="res://cenas/plataformaspriteteste.tscn" id="7_y6ka1"]
+[ext_resource type="PackedScene" uid="uid://v40oxbfsuguw" path="res://cenas/plataformaspriteteste.tscn" id="7_y6ka1"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="9_pnue8"]
-[ext_resource type="PackedScene" uid="uid://c57uxl6p6u2wj" path="res://cenas/recargas.tscn" id="11_58oqi"]
-[ext_resource type="PackedScene" uid="uid://wvfsqg2uhupc" path="res://cenas/checkpoint.tscn" id="12_df8hd"]
+[ext_resource type="PackedScene" path="res://cenas/recargas.tscn" id="11_58oqi"]
+[ext_resource type="PackedScene" path="res://cenas/checkpoint.tscn" id="12_df8hd"]
 [ext_resource type="Script" path="res://scripts/borda.gd" id="13_catd0"]
 
 [sub_resource type="Animation" id="Animation_xk8nd"]
@@ -582,6 +582,9 @@ text = "porta"
 
 [node name="recargas" parent="." instance=ExtResource("11_58oqi")]
 position = Vector2(-248, 566)
+
+[node name="recargas2" parent="." instance=ExtResource("11_58oqi")]
+position = Vector2(509, 317)
 
 [node name="checkpoint" parent="." instance=ExtResource("12_df8hd")]
 position = Vector2(1132, 451)
