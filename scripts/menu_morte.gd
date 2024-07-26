@@ -1,7 +1,10 @@
 extends Control
 
+@onready var restart = $MarginContainer/VBoxContainer/restart
+	
+
 func _ready():
-	grab_focus()
+	restart.grab_focus()
 
 func _on_restart_pressed():
 	get_tree().change_scene_to_file("res://cenas/fase_1.tscn")

@@ -14,6 +14,9 @@ static var bateria :int = 4
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _enter_tree():
+	recarga_total()
+
 func _ready():
 	energia.start()
 
@@ -72,14 +75,17 @@ func _physics_process(delta):
 	
 	if (bateria == 0):
 		morrer()
-		bateria = 4
 		
 
 func recarga():
 	bateria += 1
 	energia.start()
 	
+func recarga_total():
+	bateria = 4
+	
 func morrer():
+	bateria = 4
 	get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
 
 
