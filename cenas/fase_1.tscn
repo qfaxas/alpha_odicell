@@ -439,6 +439,7 @@ texture = ExtResource("4_jdjm2")
 stretch_mode = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]
@@ -616,7 +617,7 @@ script = ExtResource("13_catd0")
 shape = SubResource("WorldBoundaryShape2D_66ife")
 
 [node name="porta" parent="." instance=ExtResource("14_8ypdy")]
-position = Vector2(1056, 388)
+position = Vector2(1036, 386)
 
 [node name="porta2" parent="." instance=ExtResource("14_8ypdy")]
 position = Vector2(26649, -1582)

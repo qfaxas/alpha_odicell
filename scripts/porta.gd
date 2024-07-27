@@ -5,6 +5,7 @@ extends Area2D
 @onready var fechado = $fechado
 @onready var aberto = $aberto
 @onready var luz = $intrans/LightOccluder2D
+@onready var light_occluder_2d = $intrans/LightOccluder2D
 
 
 const PersonagemPrincipal = preload("res://scripts/personagem_principal.gd")
@@ -15,6 +16,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("interagir") and dentro:
 			intrans.collision_layer = 0
 			fechado.hide()
+			light_occluder_2d.hide()
 			aberto.show()
 			PersonagemPrincipal.bateria -= 1
 			luz.hide()
