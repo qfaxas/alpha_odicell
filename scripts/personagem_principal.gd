@@ -9,7 +9,7 @@ const JUMP_VELOCITY = -750.0
 @onready var luz = $PointLight2D
 
 static var bateria :int = 4
-
+var jump_buffer = 0.1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -32,7 +32,10 @@ func _physics_process(delta):
 	else:
 		sprite_2d.animation = "Idle"
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump"):
+		jump_buffer = 0.1
+	jump_buffer -= delta
+	if (jump_buffer > 0) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		$Pulo.play()
 
