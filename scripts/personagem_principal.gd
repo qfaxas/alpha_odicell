@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -800.0
 @onready var bateria_atual = $CanvasLayer/bateria_atual
 @onready var energia = $energia
 @onready var luz = $PointLight2D
+@onready var tempo_morte = $tempo_morte
+
 
 static var bateria :int = 4
 var jump_buffer = 0.1
@@ -16,6 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var QUEDA = gravity * 1.7
 
 func _enter_tree():
+	get_node("Sprite2D").show()
 	recarga_total()
 
 func _ready():
@@ -27,16 +30,17 @@ func cair(velocity: Vector2):
 	return QUEDA
 
 func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += cair(velocity) * delta
-		sprite_2d.animation = "fall"
-
 	#animações
-	if (velocity.x != 0):
+	if (velocity.x != 0) and is_on_floor():
 		sprite_2d.animation = "Run"
 	else:
 		sprite_2d.animation = "Idle"
+	
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += cair(velocity) * delta
+		sprite_2d.animation = "Fall"
+
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):
 		jump_buffer = 0.1
@@ -70,19 +74,19 @@ func _physics_process(delta):
 	
 	#checa o status da bateira
 	if (bateria == 4):
-		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_cheia.png")
+		bateria_atual.animation = "cheio"
 		luz.texture_scale = 1.5
 	
 	elif (bateria == 3):
-		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_75.png")
+		bateria_atual.animation = "75"
 		luz.texture_scale = 1.25
 	
 	elif (bateria == 2):
-		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_50.png")
+		bateria_atual.animation = "50"
 		luz.texture_scale = 1
 		
 	elif (bateria == 1):
-		bateria_atual.texture = ResourceLoader.load("res://assets/arte/bateria_25.png")
+		bateria_atual.animation = "25"
 		luz.texture_scale = 0.75
 	
 	if (bateria == 0):
@@ -97,10 +101,10 @@ func recarga_total():
 	bateria = 4
 	
 func morrer():
-	bateria = 4
 	get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
-
 
 func _on_energia_timeout():
 	bateria -= 1
 	energia.start()
+
+

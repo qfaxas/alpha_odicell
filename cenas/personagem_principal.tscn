@@ -1,13 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=27 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://cm312adckubmc" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-03.png" id="1_lf5up"]
 [ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="1_vewkd"]
 [ext_resource type="Texture2D" uid="uid://bt17kt7ddeehg" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-01.png" id="2_7nv7j"]
 [ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
+[ext_resource type="Texture2D" uid="uid://edpsbw2yfb08" path="res://assets/arte/bateria_25.png" id="2_n61bx"]
 [ext_resource type="AudioStream" uid="uid://dgy55wxhbr8hh" path="res://assets/sfx/Movimentacao/jump.wav" id="3_jbw6n"]
 [ext_resource type="Texture2D" uid="uid://cvca2hs3robee" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-02.png" id="3_pt4ix"]
+[ext_resource type="Texture2D" uid="uid://c43wjt7b06blq" path="res://assets/arte/sem_bat.png" id="3_tq5dc"]
 [ext_resource type="AudioStream" uid="uid://b7qdpjhwe1pi5" path="res://assets/sfx/Movimentacao/step.wav" id="4_bcfcs"]
 [ext_resource type="Texture2D" uid="uid://c05hgpb5t5lm8" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-04.png" id="4_myhh5"]
+[ext_resource type="Texture2D" uid="uid://dm04rly862luj" path="res://assets/arte/bateria_50.png" id="4_osivg"]
+[ext_resource type="Texture2D" uid="uid://dym0l51qm183b" path="res://assets/arte/bateria_75.png" id="5_vou1c"]
 [ext_resource type="Texture2D" uid="uid://cpk7m2rfvm1o1" path="res://assets/arte/luz_foda.png" id="5_wnt7h"]
 [ext_resource type="Texture2D" uid="uid://b1speeh86rnix" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-08.png" id="6_74hyt"]
 [ext_resource type="Texture2D" uid="uid://b1oxd827sk5xh" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-17.png" id="7_oisay"]
@@ -17,12 +21,68 @@
 [ext_resource type="Texture2D" uid="uid://da5n8jr6ap2bf" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-10.png" id="11_16sjw"]
 [ext_resource type="Texture2D" uid="uid://chn5cm0c8tn3d" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-15.png" id="12_nf6s7"]
 [ext_resource type="Texture2D" uid="uid://b2xa21oku1t5a" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-16.png" id="13_n1mch"]
+[ext_resource type="Texture2D" uid="uid://dq0ofmdhshtju" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-12.png" id="22_5w0mg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_44fmv"]
 light_mode = 1
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_oui77"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n61bx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tq5dc")
+}],
+"loop": true,
+"name": &"25",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_osivg")
+}],
+"loop": true,
+"name": &"50",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vou1c")
+}],
+"loop": true,
+"name": &"75",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bv4xw")
+}],
+"loop": true,
+"name": &"cheio",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3a1gs"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_fcqb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fcqb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fcqb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fcqb2")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_lf5up")
@@ -48,7 +108,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("13_n1mch")
+}, {
+"duration": 1.0,
 "texture": ExtResource("6_74hyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n1mch")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_oisay")
@@ -63,18 +129,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_0ojr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5w0mg")
 }],
 "loop": true,
 "name": &"death",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_fcqb2")
-}],
-"loop": true,
-"name": &"fall",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -82,6 +143,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_nf6s7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oisay")
 }],
 "loop": true,
 "name": &"nfs",
@@ -106,26 +170,24 @@ script = ExtResource("1_vewkd")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 12
 
-[node name="bateria_atual" type="TextureRect" parent="CanvasLayer"]
+[node name="bateria_atual" type="AnimatedSprite2D" parent="CanvasLayer"]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_44fmv")
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -127.0
-offset_bottom = 110.0
-grow_horizontal = 0
-texture = ExtResource("2_bv4xw")
-expand_mode = 2
+position = Vector2(1834, 86)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_oui77")
+animation = &"cheio"
+autoplay = "cheio"
+frame_progress = 0.0531581
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(3, -7)
 scale = Vector2(1.90625, 1.9375)
 sprite_frames = SubResource("SpriteFrames_3a1gs")
-animation = &"fall"
+animation = &"Fall"
 autoplay = "Idle"
-frame_progress = 0.48141
+frame_progress = 0.922438
 metadata/_edit_lock_ = true
 
 [node name="corpo" type="CollisionShape2D" parent="."]
