@@ -38,6 +38,9 @@ func _physics_process(delta):
 	if (jump_buffer > 0) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		$Pulo.play()
+	if Input.is_action_just_released("jump") and velocity.y < 0:
+		velocity.y = JUMP_VELOCITY / 8
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("left", "right")
