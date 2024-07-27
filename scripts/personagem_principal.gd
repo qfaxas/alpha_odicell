@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 800.0
-const JUMP_VELOCITY = -750.0
+const JUMP_VELOCITY = -800.0
 @onready var sprite_2d = $Sprite2D
 @onready var bateria_atual = $CanvasLayer/bateria_atual
 @onready var energia = $energia
@@ -13,17 +13,23 @@ var jump_buffer = 0.1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var QUEDA = gravity * 1.7
 
 func _enter_tree():
 	recarga_total()
 
 func _ready():
 	energia.start()
+	
+func cair(velocity: Vector2):
+	if velocity.y < 0:
+		return gravity
+	return QUEDA
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += cair(velocity) * delta
 		sprite_2d.animation = "fall"
 
 	#animações
@@ -39,7 +45,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		$Pulo.play()
 	if Input.is_action_just_released("jump") and velocity.y < 0:
-		velocity.y = JUMP_VELOCITY / 8
+		velocity.y = JUMP_VELOCITY / 4
 		
 
 	# Get the input direction and handle the movement/deceleration.
