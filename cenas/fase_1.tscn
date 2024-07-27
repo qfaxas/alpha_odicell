@@ -402,7 +402,7 @@ sources/0 = SubResource("TileSetAtlasSource_vfusm")
 distance = -1274.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ovl"]
-size = Vector2(7914, 102)
+size = Vector2(5214, 89)
 
 [node name="fase1" type="Node2D"]
 script = ExtResource("1_4pemp")
@@ -415,7 +415,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -13487.0
 offset_top = -796.0
-offset_right = 51551.0
+offset_right = 58604.0
 offset_bottom = 575.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -425,15 +425,15 @@ stretch_mode = 1
 [node name="fundo_verde" type="TextureRect" parent="."]
 offset_left = -13443.0
 offset_top = 536.0
-offset_right = 51540.0
-offset_bottom = 3349.0
+offset_right = 58638.0
+offset_bottom = 4678.0
 texture = ExtResource("3_0ayl7")
 stretch_mode = 1
 
 [node name="fundo_verde2" type="TextureRect" parent="."]
 offset_left = -13582.0
 offset_top = -4701.0
-offset_right = 51609.0
+offset_right = 58556.0
 offset_bottom = -796.0
 texture = ExtResource("4_jdjm2")
 stretch_mode = 1
@@ -591,7 +591,7 @@ position = Vector2(15407, 13)
 position = Vector2(26910, -1509)
 
 [node name="checkpoint4" parent="." instance=ExtResource("12_df8hd")]
-position = Vector2(42021, -2114)
+position = Vector2(42023, -2097)
 
 [node name="checkpoint5" parent="." instance=ExtResource("12_df8hd")]
 position = Vector2(36859, -377)
@@ -609,29 +609,37 @@ script = ExtResource("13_catd0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="borda2"]
 shape = SubResource("WorldBoundaryShape2D_66ife")
 
+[node name="borda3" type="Area2D" parent="."]
+position = Vector2(21035, 355)
+script = ExtResource("13_catd0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borda3"]
+shape = SubResource("WorldBoundaryShape2D_66ife")
+
 [node name="porta" parent="." instance=ExtResource("14_8ypdy")]
 position = Vector2(1056, 388)
 
 [node name="porta2" parent="." instance=ExtResource("14_8ypdy")]
 position = Vector2(26649, -1582)
 
+[node name="deadzone2" type="Area2D" parent="."]
+position = Vector2(34511, -2790)
+script = ExtResource("15_myu1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deadzone2"]
+position = Vector2(2595, 221)
+shape = SubResource("RectangleShape2D_e3ovl")
+
 [node name="deadzone" type="Area2D" parent="."]
 position = Vector2(29395, -2080)
 script = ExtResource("15_myu1a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deadzone"]
-position = Vector2(3947, -41)
-shape = SubResource("RectangleShape2D_e3ovl")
-
-[node name="deadzone2" type="Area2D" parent="."]
-position = Vector2(29395, -2080)
-script = ExtResource("15_myu1a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="deadzone2"]
-position = Vector2(3947, -41)
+position = Vector2(2721, -149.5)
 shape = SubResource("RectangleShape2D_e3ovl")
 
 [connection signal="body_entered" from="borda" to="." method="_on_borda_body_entered"]
 [connection signal="body_entered" from="borda2" to="." method="_on_borda_body_entered"]
-[connection signal="body_entered" from="deadzone" to="." method="_on_deadzone_body_entered"]
+[connection signal="body_entered" from="borda3" to="." method="_on_borda_body_entered"]
 [connection signal="body_entered" from="deadzone2" to="." method="_on_deadzone_body_entered"]
+[connection signal="body_entered" from="deadzone" to="." method="_on_deadzone_body_entered"]

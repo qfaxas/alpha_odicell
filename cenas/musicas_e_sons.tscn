@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7er1xnctr32s"]
+[gd_scene load_steps=4 format=3 uid="uid://c7er1xnctr32s"]
 
 [ext_resource type="Script" path="res://scripts/musicas_e_sons.gd" id="1_wubpc"]
 [ext_resource type="AudioStream" uid="uid://b1t3jxhc4te11" path="res://assets/sfx/Musica/Melodia_Piano_Loop.wav" id="2_s12c4"]
+[ext_resource type="AudioStream" uid="uid://b7aqrea8fdg8q" path="res://assets/sfx/Musica/Grelinho.mp3" id="3_2i8yq"]
 
 [node name="musicas_e_sons" type="Node"]
 process_mode = 3
 script = ExtResource("1_wubpc")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musicafundo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_s12c4")
 autoplay = true
+bus = &"musica"
+
+[node name="grelinho" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2i8yq")
 bus = &"musica"

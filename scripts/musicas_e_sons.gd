@@ -1,8 +1,9 @@
 extends Node
 
+@onready var grelinho = $grelinho
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func tocar_grelinho():
+	grelinho.play()
 
-
+func parar_grelinho():
+	grelinho.stop()

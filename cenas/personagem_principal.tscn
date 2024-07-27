@@ -97,7 +97,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
-size = Vector2(99, 177)
+size = Vector2(99, 157)
 
 [node name="Personagem_principal" type="CharacterBody2D"]
 position = Vector2(0, -2)
@@ -129,7 +129,7 @@ frame_progress = 0.48141
 metadata/_edit_lock_ = true
 
 [node name="corpo" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -12.5)
+position = Vector2(1.5, -2.5)
 shape = SubResource("RectangleShape2D_0xoje")
 metadata/_edit_lock_ = true
 
