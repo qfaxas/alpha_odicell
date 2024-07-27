@@ -1,8 +1,8 @@
 extends Area2D
 
 @onready var timer = $Timer
-const PERSONAGEM_PRINCIPAL = preload("res://cenas/personagem_principal.tscn")
-const PersonagemPrincipal = preload("res://scripts/personagem_principal.gd")
+@onready var personagem_principal = $"../Personagem_principal"
+
 
 var escuro = true
 
@@ -12,4 +12,4 @@ func _on_body_entered(body):
 
 
 func _on_timer_timeout():
-	PersonagemPrincipal.luz.show()
+	personagem_principal.luz.show()
