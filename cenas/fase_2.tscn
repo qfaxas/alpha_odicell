@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/fase_1.gd" id="1_tit0r"]
 [ext_resource type="Texture2D" uid="uid://bnj6exqhbiuvt" path="res://assets/arte/fundo.png" id="1_vcrsa"]
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="2_nc1fr"]
-[ext_resource type="PackedScene" path="res://cenas/plataformaspriteteste.tscn" id="3_50ubh"]
+[ext_resource type="PackedScene" uid="uid://v40oxbfsuguw" path="res://cenas/plataformaspriteteste.tscn" id="3_50ubh"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="4_ridnp"]
 [ext_resource type="PackedScene" uid="uid://c3so6flpnqijv" path="res://cenas/personagem_principal.tscn" id="6_rsram"]
 [ext_resource type="PackedScene" uid="uid://c57uxl6p6u2wj" path="res://cenas/recargas.tscn" id="7_01alp"]
@@ -83,7 +83,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_8l4sq"]
 resource_name = "cima"
-length = 2.0
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -92,7 +92,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
+"times": PackedFloat32Array(1, 2.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(289, 4053), Vector2(294, 2952)]
@@ -121,7 +121,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_b2toh"]
 resource_name = "ladi"
-length = 2.0
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -130,7 +130,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
+"times": PackedFloat32Array(1, 2.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-3139, 3180), Vector2(-4981, 3180)]
@@ -159,7 +159,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_i3qpq"]
 resource_name = "ladinho"
-length = 2.0
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -168,7 +168,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.5),
+"times": PackedFloat32Array(1, 2.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-7244, 3175), Vector2(-5610, 3175)]
@@ -197,7 +197,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_4y8oe"]
 resource_name = "a"
-length = 2.5
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -206,7 +206,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 2),
+"times": PackedFloat32Array(1, 2.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-5692, 1803), Vector2(-3150, 1803)]
@@ -235,7 +235,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_v3i2x"]
 resource_name = "sada"
-length = 2.5
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -244,7 +244,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 2),
+"times": PackedFloat32Array(1, 2.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(4287, 1189), Vector2(4287, -595)]
@@ -273,7 +273,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_dmhvg"]
 resource_name = "fi"
-length = 2.5
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -282,7 +282,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 2),
+"times": PackedFloat32Array(1, 2.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-1034, -792), Vector2(-1034, -2000)]
@@ -311,7 +311,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_p1dd4"]
 resource_name = "as"
-length = 2.5
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -320,7 +320,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 2),
+"times": PackedFloat32Array(1, 2.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-6614, -3008), Vector2(-6614, -1219)]
@@ -498,21 +498,23 @@ text = "FINAL
 "
 
 [node name="Personagem_principal" parent="." instance=ExtResource("6_rsram")]
-position = Vector2(-4155, 47)
+position = Vector2(-4371, 3835)
 
-[node name="recargas" parent="." instance=ExtResource("7_01alp")]
+[node name="recargas6" type="Node" parent="."]
+
+[node name="recargas" parent="recargas6" instance=ExtResource("7_01alp")]
 position = Vector2(-3079, 4152)
 
-[node name="recargas2" parent="." instance=ExtResource("7_01alp")]
+[node name="recargas2" parent="recargas6" instance=ExtResource("7_01alp")]
 position = Vector2(-2393, 1511)
 
-[node name="recargas4" parent="." instance=ExtResource("7_01alp")]
+[node name="recargas4" parent="recargas6" instance=ExtResource("7_01alp")]
 position = Vector2(568, -323)
 
-[node name="recargas3" parent="." instance=ExtResource("7_01alp")]
+[node name="recargas3" parent="recargas6" instance=ExtResource("7_01alp")]
 position = Vector2(-6516, -646)
 
-[node name="recargas5" parent="." instance=ExtResource("7_01alp")]
+[node name="recargas5" parent="recargas6" instance=ExtResource("7_01alp")]
 position = Vector2(-4507, -2096)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
