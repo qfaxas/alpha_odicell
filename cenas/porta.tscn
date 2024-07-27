@@ -8,7 +8,7 @@
 size = Vector2(464, 295)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7loft"]
-size = Vector2(128, 217.5)
+size = Vector2(74, 217.5)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0uydg"]
 polygon = PackedVector2Array(49, -86, 49, 133, 66, 132, 66, -90)
@@ -18,13 +18,14 @@ script = ExtResource("1_jbf5f")
 
 [node name="fechado" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.9, 0.9)
+position = Vector2(33.075, 0)
+scale = Vector2(0.652247, 0.9)
 texture = ExtResource("1_et6c2")
 
 [node name="aberto" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-6, 0)
-scale = Vector2(0.9, 0.9)
+position = Vector2(28.075, 0)
+scale = Vector2(0.644757, 0.9)
 texture = ExtResource("2_1e0ns")
 
 [node name="interagir" type="CollisionShape2D" parent="."]
@@ -34,10 +35,11 @@ shape = SubResource("RectangleShape2D_gqs2t")
 [node name="intrans" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="intrans"]
-position = Vector2(-5, 23.75)
+position = Vector2(22, 23.75)
 shape = SubResource("RectangleShape2D_7loft")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="intrans"]
+position = Vector2(6, 1)
 occluder = SubResource("OccluderPolygon2D_0uydg")
 
 [node name="Label" type="Label" parent="."]

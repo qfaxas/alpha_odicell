@@ -6,6 +6,7 @@ func _ready():
 
 
 func _on_play_button_pressed():
+	Autoload.ultimo_checkpoint = null
 	get_tree().change_scene_to_file("res://cenas/fase_1.tscn")
 
 
