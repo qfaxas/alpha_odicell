@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmhciwt83m08x"]
+[gd_scene load_steps=4 format=3 uid="uid://cmhciwt83m08x"]
 
-[ext_resource type="Texture2D" uid="uid://c4od0c0ipdvl8" path="res://assets/arte/Gray.png" id="1_8bye3"]
+[ext_resource type="Script" path="res://scripts/creditos.gd" id="1_2mqrq"]
+[ext_resource type="Texture2D" uid="uid://dend3ntik26nn" path="res://assets/arte/estrelas.png" id="2_0rayc"]
 [ext_resource type="Script" path="res://scripts/voltar.gd" id="2_bakek"]
 
 [node name="creditos" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2mqrq")
 metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -20,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_8bye3")
+texture = ExtResource("2_0rayc")
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
@@ -39,31 +41,32 @@ metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "Cabral: Game Design, Progamação"
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "Danilo: Arte Conceitual"
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "Mendes: Programação, Interfaces Gerais"
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "Silvio: Narrativa, Trilha Sonora"
 
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 text = "GoDoug: Palpiteiro"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
@@ -79,6 +82,7 @@ flat = true
 
 [node name="voltar" type="Button" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Voltar"
 script = ExtResource("2_bakek")
 
