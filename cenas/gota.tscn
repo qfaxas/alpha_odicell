@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://55jsgu3dt2rx"]
+[gd_scene load_steps=3 format=3 uid="uid://55jsgu3dt2rx"]
 
 [ext_resource type="Texture2D" uid="uid://c4u4gbmy2fbqr" path="res://assets/arte/gota.png" id="1_wwubd"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5vamo"]
+radius = 17.0294
+
 [node name="Node2D" type="Node2D"]
 
-[node name="Animatablebody" type="AnimatableBody2D" parent="."]
+[node name="area2d" type="Area2D" parent="."]
 
-[node name="Gota" type="Sprite2D" parent="Animatablebody"]
+[node name="Gota" type="Sprite2D" parent="area2d"]
 texture = ExtResource("1_wwubd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area2d"]
+position = Vector2(1, 9)
+shape = SubResource("CircleShape2D_5vamo")
