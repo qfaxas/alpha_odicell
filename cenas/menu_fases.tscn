@@ -5,8 +5,8 @@
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_d0v1e"]
 [ext_resource type="Texture2D" uid="uid://c3lm81p6yrsrn" path="res://assets/arte/botao_simples.png" id="4_3vwh1"]
 [ext_resource type="Script" path="res://scripts/botao_fases.gd" id="4_vo6ty"]
+[ext_resource type="Texture2D" uid="uid://dv2f2iasj3iho" path="res://assets/arte/foco2.png" id="5_7dmys"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="5_i7sgl"]
-[ext_resource type="Texture2D" uid="uid://bmwu4rdxvr01x" path="res://assets/arte/bota_foco.png" id="5_p7qa1"]
 [ext_resource type="AudioStream" uid="uid://bp0cgiabm5nt0" path="res://assets/sfx/Ambiente/choque 1.wav" id="7_jk2b8"]
 
 [node name="menu_fases" type="Control"]
@@ -54,8 +54,9 @@ focus_neighbor_right = NodePath("../Button2")
 focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
 theme = ExtResource("2_d0v1e")
 texture_normal = ExtResource("4_3vwh1")
-texture_hover = ExtResource("5_p7qa1")
-texture_focused = ExtResource("5_p7qa1")
+texture_pressed = ExtResource("5_7dmys")
+texture_hover = ExtResource("5_7dmys")
+texture_focused = ExtResource("5_7dmys")
 script = ExtResource("4_vo6ty")
 
 [node name="Label" type="Label" parent="HBoxContainer/Button"]
@@ -84,8 +85,9 @@ focus_neighbor_right = NodePath("../Button")
 focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
 theme = ExtResource("2_d0v1e")
 texture_normal = ExtResource("4_3vwh1")
-texture_hover = ExtResource("5_p7qa1")
-texture_focused = ExtResource("5_p7qa1")
+texture_pressed = ExtResource("5_7dmys")
+texture_hover = ExtResource("5_7dmys")
+texture_focused = ExtResource("5_7dmys")
 
 [node name="Label" type="Label" parent="HBoxContainer/Button2"]
 layout_mode = 1
@@ -135,8 +137,9 @@ focus_neighbor_top = NodePath("../../HBoxContainer/Button")
 focus_neighbor_bottom = NodePath("../../HBoxContainer/Button")
 theme = ExtResource("2_d0v1e")
 texture_normal = ExtResource("4_3vwh1")
-texture_hover = ExtResource("5_p7qa1")
-texture_focused = ExtResource("5_p7qa1")
+texture_pressed = ExtResource("5_7dmys")
+texture_hover = ExtResource("5_7dmys")
+texture_focused = ExtResource("5_7dmys")
 
 [node name="Label" type="Label" parent="VBoxContainer/b2"]
 layout_mode = 1
@@ -153,5 +156,5 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/b2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/b2" to="." method="_on_b_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/b2" to="." method="_on_button_2_pressed"]

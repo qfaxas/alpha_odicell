@@ -10,7 +10,7 @@ func _ready():
 	morte.play()
 
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://cenas/fase_1.tscn")
+	get_tree().reload_current_scene()
 
 
 func _on_options_pressed():

@@ -9,14 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://cgyudj2f6k7vh" path="res://cenas/quadrado_morte.tscn" id="4_qnqvr"]
 [ext_resource type="Texture2D" uid="uid://b3hhxwg55be4a" path="res://assets/arte/PLACA PLATAFORMA.png" id="5_oqchc"]
 [ext_resource type="PackedScene" uid="uid://dxq8hch18qwm6" path="res://cenas/menu_pause.tscn" id="6_1m1bv"]
-[ext_resource type="PackedScene" uid="uid://v40oxbfsuguw" path="res://cenas/plataformaspriteteste.tscn" id="7_y6ka1"]
+[ext_resource type="PackedScene" path="res://cenas/plataformaspriteteste.tscn" id="7_y6ka1"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="9_pnue8"]
 [ext_resource type="PackedScene" uid="uid://c57uxl6p6u2wj" path="res://cenas/recargas.tscn" id="11_58oqi"]
 [ext_resource type="PackedScene" uid="uid://wvfsqg2uhupc" path="res://cenas/checkpoint.tscn" id="12_df8hd"]
 [ext_resource type="Script" path="res://scripts/borda.gd" id="13_catd0"]
 [ext_resource type="PackedScene" uid="uid://bqw1f2x8hhrss" path="res://cenas/porta.tscn" id="14_8ypdy"]
 [ext_resource type="Script" path="res://scripts/deadzone.gd" id="15_myu1a"]
-[ext_resource type="PackedScene" uid="uid://d14r4auc3otsf" path="res://cenas/mudar_fase.tscn" id="16_k4uje"]
+[ext_resource type="PackedScene" uid="uid://dvr3m7uvcoqd2" path="res://cenas/mudar_fase.tscn" id="16_k4uje"]
 [ext_resource type="PackedScene" uid="uid://bsx24udpqg63w" path="res://cenas/cabos.tscn" id="16_xkfj1"]
 [ext_resource type="AudioStream" uid="uid://bu4xgyqb7oyoa" path="res://assets/sfx/Menu/som de iniciar o jogo.wav" id="18_lbew1"]
 
@@ -478,7 +478,7 @@ scale = Vector2(1.71875, 1.71875)
 texture = ExtResource("5_oqchc")
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]
-position = Vector2(49988, -1911)
+position = Vector2(-2510, 289)
 
 [node name="quadrado_morte" parent="." instance=ExtResource("4_qnqvr")]
 position = Vector2(653, 583)
