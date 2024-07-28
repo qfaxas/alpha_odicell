@@ -8,6 +8,7 @@ func _ready():
 	get_viewport().size = DisplayServer.screen_get_size()
 	MusicasESons.parar_creditos()
 	MusicasESons.tocar_musica()
+	MusicasESons.tocar_grelinho()
 
 	
 func _enter_tree():
