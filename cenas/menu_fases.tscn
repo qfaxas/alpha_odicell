@@ -30,10 +30,10 @@ texture = ExtResource("1_a0nsa")
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.338542
-anchor_top = 0.42037
-anchor_right = 0.6625
-anchor_bottom = 0.583333
+anchor_left = 0.422917
+anchor_top = 0.423148
+anchor_right = 0.746875
+anchor_bottom = 0.586111
 offset_right = -311.0
 offset_bottom = -88.0
 grow_horizontal = 2
@@ -46,7 +46,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-focus_neighbor_left = NodePath("../Button3")
 focus_neighbor_right = NodePath("../Button2")
 focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
 theme = ExtResource("2_d0v1e")
@@ -58,22 +57,10 @@ script = ExtResource("4_vo6ty")
 texture_filter = 1
 layout_mode = 2
 focus_neighbor_left = NodePath("../Button")
-focus_neighbor_right = NodePath("../Button3")
 focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
 theme = ExtResource("2_d0v1e")
 theme_override_font_sizes/font_size = 64
 text = "2"
-icon = ExtResource("3_g4u1d")
-
-[node name="Button3" type="Button" parent="HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-focus_neighbor_left = NodePath("../Button2")
-focus_neighbor_right = NodePath("../Button")
-focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
-theme = ExtResource("2_d0v1e")
-theme_override_font_sizes/font_size = 64
-text = "3"
 icon = ExtResource("3_g4u1d")
 
 [node name="escolha" type="AudioStreamPlayer" parent="."]
