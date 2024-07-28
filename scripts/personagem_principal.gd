@@ -101,7 +101,7 @@ func _physics_process(delta):
 		
 
 func recarga():
-	if bateria >= 3:
+	if bateria <= 3:
 		bateria += 1
 	energia.start()
 	

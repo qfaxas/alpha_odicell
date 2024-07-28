@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://pbovc7lljl5b"]
+
+[ext_resource type="Script" path="res://scripts/porta_esq.gd" id="1_lpvag"]
+[ext_resource type="Texture2D" uid="uid://ch4ysc40mn51o" path="res://assets/arte/porta_modelo3_envio-01.png" id="1_ofoxp"]
+[ext_resource type="Texture2D" uid="uid://bxg6gmuyfs0j4" path="res://assets/arte/porta_modelo3_envio-aberto.png" id="2_uouc3"]
+[ext_resource type="FontFile" uid="uid://85qgsai3748v" path="res://assets/arte/DeliusSwashCaps-Regular.ttf" id="4_n6wgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6gsa"]
+size = Vector2(334, 222)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2718o"]
+polygon = PackedVector2Array(-4, -98, -4, 97, -15, 97, -16, -99)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adt7x"]
+size = Vector2(20, 195)
+
+[node name="porta_esq" type="Area2D"]
+script = ExtResource("1_lpvag")
+
+[node name="fechada" type="Sprite2D" parent="."]
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("1_ofoxp")
+flip_h = true
+
+[node name="abert" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("2_uouc3")
+flip_h = true
+
+[node name="intera" type="CollisionShape2D" parent="."]
+position = Vector2(134, -10)
+shape = SubResource("RectangleShape2D_w6gsa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D"]
+occluder = SubResource("OccluderPolygon2D_2718o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_adt7x")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = 65.0
+offset_top = -61.0
+offset_right = 245.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("4_n6wgi")
+theme_override_font_sizes/font_size = 32
+text = "Abrir Porta?
+[E]/[X] "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
