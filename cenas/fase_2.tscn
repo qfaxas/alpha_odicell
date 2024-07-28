@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c57uxl6p6u2wj" path="res://cenas/recargas.tscn" id="7_01alp"]
 [ext_resource type="PackedScene" uid="uid://dxq8hch18qwm6" path="res://cenas/menu_pause.tscn" id="8_kmhwl"]
 [ext_resource type="PackedScene" uid="uid://wvfsqg2uhupc" path="res://cenas/checkpoint.tscn" id="9_ci3ca"]
-[ext_resource type="PackedScene" uid="uid://55jsgu3dt2rx" path="res://cenas/gota.tscn" id="10_u7rot"]
+[ext_resource type="PackedScene" uid="uid://b1wumxfkfglfi" path="res://cenas/gota.tscn" id="10_u7rot"]
 [ext_resource type="PackedScene" uid="uid://bsx24udpqg63w" path="res://cenas/cabos.tscn" id="11_vfypb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tp264"]
@@ -335,6 +335,21 @@ _data = {
 "as": SubResource("Animation_p1dd4")
 }
 
+[sub_resource type="Animation" id="Animation_gmw36"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10089, 109)]
+}
+
 [sub_resource type="Animation" id="Animation_iyv5k"]
 resource_name = "acaboutrptmj"
 length = 4.5
@@ -350,21 +365,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-10089, 109), Vector2(-10089, 3115)]
-}
-
-[sub_resource type="Animation" id="Animation_gmw36"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-10089, 109)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8dd76"]
@@ -441,6 +441,23 @@ tracks/0/keys = {
 "values": [Vector2(2494, 197)]
 }
 
+[sub_resource type="Animation" id="Animation_0s6j0"]
+resource_name = "adoletalepetipetipola"
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5291, -4134), Vector2(-5291, -1683)]
+}
+
 [sub_resource type="Animation" id="Animation_0sxb2"]
 resource_name = "caicaibalao"
 length = 3.0
@@ -492,23 +509,6 @@ tracks/0/keys = {
 "values": [Vector2(-3892, -2665), Vector2(-3892, -1661)]
 }
 
-[sub_resource type="Animation" id="Animation_0s6j0"]
-resource_name = "adoletalepetipetipola"
-length = 3.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-5291, -4134), Vector2(-5291, -1683)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4m7uw"]
 _data = {
 "RESET": SubResource("Animation_pp6qw"),
@@ -556,6 +556,23 @@ _data = {
 "asdasdasdasdasdasd": SubResource("Animation_3v3x8")
 }
 
+[sub_resource type="Animation" id="Animation_w5mb2"]
+resource_name = "12"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
 [sub_resource type="Animation" id="Animation_yaqoq"]
 length = 0.001
 tracks/0/type = "value"
@@ -569,6 +586,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(139, 399)]
+}
+
+[sub_resource type="Animation" id="Animation_scdng"]
+resource_name = "abecedeeefgf"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-4530, -696), Vector2(-4530, 632)]
 }
 
 [sub_resource type="Animation" id="Animation_rsgnn"]
@@ -603,40 +637,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-2788, -984), Vector2(-2788, 328)]
-}
-
-[sub_resource type="Animation" id="Animation_w5mb2"]
-resource_name = "12"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-
-[sub_resource type="Animation" id="Animation_scdng"]
-resource_name = "abecedeeefgf"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-4530, -696), Vector2(-4530, 632)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_thrt0"]
@@ -824,7 +824,7 @@ position = Vector2(2494, 197)
 libraries = {
 "": SubResource("AnimationLibrary_4m7uw")
 }
-autoplay = "pariperi"
+autoplay = "adoletalepetipetipola"
 
 [node name="gota5" parent="." instance=ExtResource("10_u7rot")]
 position = Vector2(2494, 197)
@@ -833,7 +833,7 @@ position = Vector2(2494, 197)
 libraries = {
 "": SubResource("AnimationLibrary_4m7uw")
 }
-autoplay = "adoletalepetipetipola"
+autoplay = "caicaibalao"
 
 [node name="gota7" parent="." instance=ExtResource("10_u7rot")]
 position = Vector2(2494, 197)
@@ -842,7 +842,7 @@ position = Vector2(2494, 197)
 libraries = {
 "": SubResource("AnimationLibrary_4m7uw")
 }
-autoplay = "caicaibalao"
+autoplay = "gotanova"
 
 [node name="gota8" parent="." instance=ExtResource("10_u7rot")]
 position = Vector2(2494, 197)
@@ -851,7 +851,7 @@ position = Vector2(2494, 197)
 libraries = {
 "": SubResource("AnimationLibrary_4m7uw")
 }
-autoplay = "gotanova"
+autoplay = "pariperi"
 
 [node name="gota2" parent="." instance=ExtResource("10_u7rot")]
 position = Vector2(1178, 552)
@@ -869,7 +869,7 @@ position = Vector2(139, 399)
 libraries = {
 "": SubResource("AnimationLibrary_thrt0")
 }
-autoplay = "abecedeeefgf"
+autoplay = "al"
 
 [node name="gota4" parent="." instance=ExtResource("10_u7rot")]
 position = Vector2(139, 399)
@@ -878,7 +878,7 @@ position = Vector2(139, 399)
 libraries = {
 "": SubResource("AnimationLibrary_thrt0")
 }
-autoplay = "gota"
+autoplay = "abecedeeefgf"
 
 [node name="gota6" parent="." instance=ExtResource("10_u7rot")]
 position = Vector2(139, 399)
@@ -887,7 +887,7 @@ position = Vector2(139, 399)
 libraries = {
 "": SubResource("AnimationLibrary_thrt0")
 }
-autoplay = "al"
+autoplay = "gota"
 
 [node name="cabos" parent="." instance=ExtResource("11_vfypb")]
 position = Vector2(-2198, 4015)

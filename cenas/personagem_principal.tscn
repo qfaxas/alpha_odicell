@@ -171,6 +171,7 @@ _data = [Vector2(0.011236, -296.703), 0.0, 0.0, 0, 0, Vector2(0.921348, 344.176)
 point_count = 2
 
 [node name="Personagem_principal" type="CharacterBody2D"]
+z_index = 100
 position = Vector2(0, -2)
 script = ExtResource("1_vewkd")
 

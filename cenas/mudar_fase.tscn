@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvr3m7uvcoqd2"]
+[gd_scene load_steps=4 format=3 uid="uid://d14r4auc3otsf"]
 
 [ext_resource type="Script" path="res://scripts/mudar_fase.gd" id="1_hga0o"]
 [ext_resource type="Texture2D" uid="uid://cvhm4x436b5f0" path="res://assets/arte/odicell_logo-Photoroom.png" id="1_pkc0j"]

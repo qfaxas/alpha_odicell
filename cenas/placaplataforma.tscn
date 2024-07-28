@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyv3h4sek8pnb"]
+
+[ext_resource type="Texture2D" uid="uid://b3hhxwg55be4a" path="res://assets/arte/PLACA PLATAFORMA.png" id="1_grl00"]
+
+[node name="Node2D" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_grl00")
