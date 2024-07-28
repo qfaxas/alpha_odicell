@@ -48,8 +48,8 @@ angular_velocity_max = 720.0
 angular_velocity_curve = SubResource("Curve_3u8lo")
 orbit_velocity_min = -2.0
 orbit_velocity_max = 2.0
-scale_amount_min = 2.0
-scale_amount_max = 2.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
 color_ramp = SubResource("Gradient_ynhn5")
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
@@ -69,8 +69,8 @@ angular_velocity_max = -400.0
 angular_velocity_curve = SubResource("Curve_3u8lo")
 orbit_velocity_min = -2.0
 orbit_velocity_max = 2.0
-scale_amount_min = 2.0
-scale_amount_max = 2.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
 color_ramp = SubResource("Gradient_ynhn5")
 
 [node name="ai" type="AudioStreamPlayer" parent="."]

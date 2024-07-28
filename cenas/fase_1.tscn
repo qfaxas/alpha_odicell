@@ -442,6 +442,7 @@ texture = ExtResource("4_jdjm2")
 stretch_mode = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]
@@ -654,6 +655,21 @@ position = Vector2(49991, -1603)
 
 [node name="cabos" parent="." instance=ExtResource("16_xkfj1")]
 position = Vector2(4382, 299)
+
+[node name="cabos2" parent="." instance=ExtResource("16_xkfj1")]
+position = Vector2(7027, 500)
+
+[node name="cabos3" parent="." instance=ExtResource("16_xkfj1")]
+position = Vector2(30498, 39)
+
+[node name="cabos4" parent="." instance=ExtResource("16_xkfj1")]
+position = Vector2(35132, -355)
+
+[node name="cabos5" parent="." instance=ExtResource("16_xkfj1")]
+position = Vector2(44965, -1942)
+
+[node name="cabos6" parent="." instance=ExtResource("16_xkfj1")]
+position = Vector2(45239, -1944)
 
 [node name="inicio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_lbew1")
