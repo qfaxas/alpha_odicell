@@ -4,9 +4,6 @@ extends Area2D
 @onready var personagem_principal = $"../Personagem_principal"
 @onready var canvas_modulate = $"../CanvasModulate"
 
-
-var escuro = true
-
 func _on_body_entered(body):
 	if (body.name == "Personagem_principal"):
 		body.luz.hide()

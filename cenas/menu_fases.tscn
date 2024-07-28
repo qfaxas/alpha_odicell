@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://vp54rd3udimm"]
+[gd_scene load_steps=9 format=3 uid="uid://vp54rd3udimm"]
 
 [ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="1_a0nsa"]
 [ext_resource type="Script" path="res://scripts/menu_fases.gd" id="1_a3exr"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_d0v1e"]
-[ext_resource type="Texture2D" uid="uid://bs3sd8hw188e1" path="res://assets/arte/cadeado.png" id="3_g4u1d"]
+[ext_resource type="Texture2D" uid="uid://c3lm81p6yrsrn" path="res://assets/arte/botao_simples.png" id="4_3vwh1"]
 [ext_resource type="Script" path="res://scripts/botao_fases.gd" id="4_vo6ty"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="5_i7sgl"]
+[ext_resource type="Texture2D" uid="uid://bmwu4rdxvr01x" path="res://assets/arte/bota_foco.png" id="5_p7qa1"]
 [ext_resource type="AudioStream" uid="uid://bp0cgiabm5nt0" path="res://assets/sfx/Ambiente/choque 1.wav" id="7_jk2b8"]
 
 [node name="menu_fases" type="Control"]
@@ -26,42 +27,82 @@ offset_bottom = 1225.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_a0nsa")
+metadata/_edit_lock_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.422917
-anchor_top = 0.423148
-anchor_right = 0.746875
-anchor_bottom = 0.586111
-offset_right = -311.0
-offset_bottom = -88.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -524.0
+offset_top = -94.0
+offset_right = 524.0
+offset_bottom = 94.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 64
-metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="Button" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Button2")
+focus_neighbor_top = NodePath("../../VBoxContainer/b2")
 focus_neighbor_right = NodePath("../Button2")
 focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
 theme = ExtResource("2_d0v1e")
-theme_override_font_sizes/font_size = 64
-text = "1"
+texture_normal = ExtResource("4_3vwh1")
+texture_hover = ExtResource("5_p7qa1")
+texture_focused = ExtResource("5_p7qa1")
 script = ExtResource("4_vo6ty")
 
-[node name="Button2" type="Button" parent="HBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/Button"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 30.0
+offset_right = -7.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "ÍNICIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="TextureButton" parent="HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 focus_neighbor_left = NodePath("../Button")
+focus_neighbor_top = NodePath("../../VBoxContainer/b2")
+focus_neighbor_right = NodePath("../Button")
 focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
 theme = ExtResource("2_d0v1e")
+texture_normal = ExtResource("4_3vwh1")
+texture_hover = ExtResource("5_p7qa1")
+texture_focused = ExtResource("5_p7qa1")
+
+[node name="Label" type="Label" parent="HBoxContainer/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 28.0
+offset_right = 1.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 64
-text = "2"
-icon = ExtResource("3_g4u1d")
+text = "FIM
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="escolha" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_i7sgl")
@@ -88,15 +129,29 @@ theme_override_constants/separation = 750
 layout_mode = 2
 flat = true
 
-[node name="b2" type="Button" parent="VBoxContainer"]
+[node name="b2" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HBoxContainer/Button")
+focus_neighbor_bottom = NodePath("../../HBoxContainer/Button")
 theme = ExtResource("2_d0v1e")
+texture_normal = ExtResource("4_3vwh1")
+texture_hover = ExtResource("5_p7qa1")
+texture_focused = ExtResource("5_p7qa1")
+
+[node name="Label" type="Label" parent="VBoxContainer/b2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 21.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 64
-text = "Voltar
-"
+text = "VOLTAR"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/b2" to="." method="_on_b_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/b2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/b2" to="." method="_on_b_2_pressed"]

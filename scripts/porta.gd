@@ -7,6 +7,7 @@ extends Area2D
 @onready var luz = $intrans/LightOccluder2D
 @onready var light_occluder_2d = $intrans/LightOccluder2D
 
+@export var teste :int = 1
 
 const PersonagemPrincipal = preload("res://scripts/personagem_principal.gd")
 

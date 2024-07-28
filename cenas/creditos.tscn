@@ -44,31 +44,38 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.749165, 0.229863, 1)
 theme_override_font_sizes/font_size = 40
-text = "Cabral: Game Design, Progamação"
+text = "Felipe Cabral Liporage: Progamação e Game Design"
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.74902, 0.231373, 1)
 theme_override_font_sizes/font_size = 40
 text = "Danilo: Arte Conceitual"
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.74902, 0.231373, 1)
 theme_override_font_sizes/font_size = 40
-text = "Mendes: Programação, Interfaces Gerais"
+text = "João Pedro Mendes: Programação e Interfaces"
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.74902, 0.231373, 1)
 theme_override_font_sizes/font_size = 40
 text = "Silvio: Narrativa, Trilha Sonora"
 
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.74902, 0.231373, 1)
 theme_override_font_sizes/font_size = 40
-text = "GoDoug: Palpiteiro"
+text = "GoDoug: Palpiteiro
+"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
