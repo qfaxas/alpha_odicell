@@ -48,21 +48,12 @@ theme_override_constants/separation = 16
 [node name="volume_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../voltar")
-focus_neighbor_bottom = NodePath("../graphs_button")
 theme = ExtResource("2_8v721")
 text = "Volume"
 script = ExtResource("2_pdya7")
 
-[node name="graphs_button" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../volume_button")
-focus_neighbor_bottom = NodePath("../control_remap")
-theme = ExtResource("2_8v721")
-text = "Gráficos"
-
 [node name="control_remap" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../graphs_button")
 focus_neighbor_bottom = NodePath("../voltar")
 theme = ExtResource("2_8v721")
 text = "Controles"
@@ -78,7 +69,6 @@ text = "Voltar"
 stream = ExtResource("5_v1gtx")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/volume_button" to="." method="_on_volume_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/graphs_button" to="." method="_on_graphs_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/control_remap" to="." method="_on_control_remap_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/voltar" to="." method="_on_voltar_pressed"]
 [connection signal="finished" from="escolha" to="." method="_on_escolha_finished"]

@@ -3,6 +3,7 @@ extends Node
 @onready var grelinho = $grelinho
 @onready var musicafundo = $musicafundo
 @onready var creditos = $creditos
+@onready var final = $final
 
 func tocar_grelinho():
 	grelinho.play()
@@ -21,3 +22,9 @@ func tocar_creditos():
 	
 func parar_creditos():
 	creditos.stop()
+
+func tocar_final():
+	final.play()
+	
+func parar_final():
+	final.stop()

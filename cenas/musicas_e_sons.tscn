@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7er1xnctr32s"]
+[gd_scene load_steps=6 format=3 uid="uid://c7er1xnctr32s"]
 
 [ext_resource type="Script" path="res://scripts/musicas_e_sons.gd" id="1_wubpc"]
 [ext_resource type="AudioStream" uid="uid://b1t3jxhc4te11" path="res://assets/sfx/Musica/Melodia_Piano_Loop.wav" id="2_s12c4"]
 [ext_resource type="AudioStream" uid="uid://b7aqrea8fdg8q" path="res://assets/sfx/Musica/Grelinho.mp3" id="3_2i8yq"]
 [ext_resource type="AudioStream" uid="uid://deuy1odxaukfv" path="res://assets/sfx/Musica/Musica_CreditosMenu.wav" id="4_tkywy"]
+[ext_resource type="AudioStream" uid="uid://cgfc8ahy1wxov" path="res://assets/sfx/Musica/Fase_Final.wav" id="5_kifvg"]
 
 [node name="musicas_e_sons" type="Node"]
 process_mode = 3
@@ -20,3 +21,6 @@ bus = &"musica"
 [node name="creditos" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_tkywy")
 volume_db = -10.0
+
+[node name="final" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_kifvg")

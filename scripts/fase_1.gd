@@ -7,8 +7,7 @@ func _ready():
 	personagem_principal.bateria = 4
 	get_viewport().size = DisplayServer.screen_get_size()
 	MusicasESons.parar_creditos()
-	MusicasESons.tocar_musica()
-	MusicasESons.tocar_grelinho()
+	MusicasESons.tocar_final()
 
 	
 func _enter_tree():
@@ -25,6 +24,6 @@ func _on_deadzone_body_entered(body):
 		get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
 
 func _exit_tree():
-	MusicasESons.parar_grelinho()
+	MusicasESons.parar_final()
 	
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmhciwt83m08x"]
+[gd_scene load_steps=6 format=3 uid="uid://cmhciwt83m08x"]
 
 [ext_resource type="Script" path="res://scripts/creditos.gd" id="1_2mqrq"]
 [ext_resource type="Texture2D" uid="uid://dend3ntik26nn" path="res://assets/arte/estrelas.png" id="2_0rayc"]
 [ext_resource type="Script" path="res://scripts/voltar.gd" id="2_bakek"]
+[ext_resource type="FontFile" uid="uid://85qgsai3748v" path="res://assets/arte/DeliusSwashCaps-Regular.ttf" id="3_excun"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="4_cid2f"]
 
 [node name="creditos" type="Control"]
@@ -27,6 +28,13 @@ texture = ExtResource("2_0rayc")
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 37.0
+offset_top = 358.0
+offset_right = 967.0
+offset_bottom = 725.0
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -46,36 +54,36 @@ size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.749165, 0.229863, 1)
-theme_override_font_sizes/font_size = 40
-text = "Felipe Cabral Liporage: Progamação e Game Design"
-
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.74902, 0.231373, 1)
+theme_override_fonts/font = ExtResource("3_excun")
 theme_override_font_sizes/font_size = 40
-text = "Danilo: Arte Conceitual"
+text = "Danilo: Artes Gerais"
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.74902, 0.231373, 1)
+theme_override_fonts/font = ExtResource("3_excun")
 theme_override_font_sizes/font_size = 40
-text = "João Pedro Mendes: Programação e Interfaces"
-
-[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.74902, 0.231373, 1)
-theme_override_font_sizes/font_size = 40
-text = "Silvio: Narrativa, Trilha Sonora"
+text = "Felipe Cabral: Progamação, Game Design e Arte"
 
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.74902, 0.231373, 1)
+theme_override_fonts/font = ExtResource("3_excun")
 theme_override_font_sizes/font_size = 40
 text = "GoDoug: Palpiteiro
 "
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_excun")
+theme_override_font_sizes/font_size = 40
+text = "João Mendes: Programação e Interfaces"
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_excun")
+theme_override_font_sizes/font_size = 40
+text = "Silvio D'Arcangelo: Narrativa, Trilha Sonora"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
