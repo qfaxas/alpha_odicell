@@ -1,17 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://55jsgu3dt2rx"]
+[gd_scene load_steps=5 format=3 uid="uid://b1wumxfkfglfi"]
 
+[ext_resource type="Script" path="res://scripts/gotas.gd" id="1_3cytt"]
 [ext_resource type="Texture2D" uid="uid://c4u4gbmy2fbqr" path="res://assets/arte/gota.png" id="1_wwubd"]
+[ext_resource type="AudioStream" uid="uid://b358dtfe647d7" path="res://assets/sfx/Personagem/Interacao/hit choque.wav" id="3_ok0yq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5vamo"]
 radius = 17.0294
 
 [node name="Node2D" type="Node2D"]
 
-[node name="area2d" type="Area2D" parent="."]
+[node name="gotas" type="Area2D" parent="."]
+script = ExtResource("1_3cytt")
 
-[node name="Gota" type="Sprite2D" parent="area2d"]
+[node name="Gota" type="Sprite2D" parent="gotas"]
 texture = ExtResource("1_wwubd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="area2d"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gotas"]
 position = Vector2(1, 9)
 shape = SubResource("CircleShape2D_5vamo")
+
+[node name="awa" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ok0yq")
+
+[connection signal="body_entered" from="gotas" to="gotas" method="_on_body_entered"]
