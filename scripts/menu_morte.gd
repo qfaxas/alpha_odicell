@@ -2,6 +2,7 @@ extends Control
 
 @onready var restart = $MarginContainer/VBoxContainer/restart
 @onready var morte = $Morte
+@onready var escolha = $escolha
 	
 
 func _ready():

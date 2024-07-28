@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1jxpw8vdu2fs"]
+[gd_scene load_steps=6 format=3 uid="uid://d1jxpw8vdu2fs"]
 
 [ext_resource type="Script" path="res://scripts/menu_opcoes.gd" id="1_dp5ff"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_8v721"]
 [ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="2_gw15w"]
 [ext_resource type="Script" path="res://scripts/volume_button.gd" id="2_pdya7"]
+[ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="5_v1gtx"]
 
 [node name="menu_opcoes" type="Control"]
 layout_mode = 3
@@ -73,7 +74,11 @@ focus_neighbor_bottom = NodePath(".")
 theme = ExtResource("2_8v721")
 text = "Voltar"
 
+[node name="escolha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v1gtx")
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/volume_button" to="." method="_on_volume_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/graphs_button" to="." method="_on_graphs_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/control_remap" to="." method="_on_control_remap_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="finished" from="escolha" to="." method="_on_escolha_finished"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bsx24udpqg63w"]
+[gd_scene load_steps=7 format=3 uid="uid://bsx24udpqg63w"]
 
 [ext_resource type="Script" path="res://scripts/cabos.gd" id="1_bukka"]
 [ext_resource type="Texture2D" uid="uid://cepikeuo0bax2" path="res://assets/arte/cabo.png" id="1_xwy21"]
+[ext_resource type="AudioStream" uid="uid://t3ijp15kgi7u" path="res://assets/sfx/Ambiente/choque 4.wav" id="3_1h751"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3a3hv"]
 size = Vector2(149, 44)
@@ -71,6 +72,9 @@ orbit_velocity_max = 2.0
 scale_amount_min = 2.0
 scale_amount_max = 2.0
 color_ramp = SubResource("Gradient_ynhn5")
+
+[node name="ai" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1h751")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

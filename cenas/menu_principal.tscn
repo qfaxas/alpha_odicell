@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbsubf88c43i6"]
+[gd_scene load_steps=7 format=3 uid="uid://dbsubf88c43i6"]
 
 [ext_resource type="Script" path="res://scripts/menu_principal.gd" id="1_k1wqs"]
 [ext_resource type="Script" path="res://scripts/play_button.gd" id="2_3utgu"]
 [ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="2_wf200"]
 [ext_resource type="Texture2D" uid="uid://cvhm4x436b5f0" path="res://assets/arte/odicell_logo-Photoroom.png" id="3_n6fh5"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="4_sxa8k"]
+[ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="6_p82at"]
 
 [node name="menu_principal" type="Control"]
 layout_mode = 3
@@ -93,6 +94,9 @@ focus_neighbor_top = NodePath("../credits_button")
 focus_neighbor_bottom = NodePath("../play_button")
 theme = ExtResource("4_sxa8k")
 text = "Sair"
+
+[node name="escolha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_p82at")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options_button" to="." method="_on_options_button_pressed"]

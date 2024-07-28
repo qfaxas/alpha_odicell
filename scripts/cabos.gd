@@ -12,6 +12,8 @@ func _on_body_entered(body):
 		body.luz.hide()
 		canvas_modulate.hide()
 		timer.start()
+		$ai.play()
+
 		personagem_principal.bateria -= 1
 
 

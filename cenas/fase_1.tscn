@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://ct3uhu1nqdoif"]
+[gd_scene load_steps=55 format=3 uid="uid://ct3uhu1nqdoif"]
 
 [ext_resource type="Script" path="res://scripts/fase_1.gd" id="1_4pemp"]
 [ext_resource type="Texture2D" uid="uid://ex2kbiik2r6f" path="res://assets/arte/tileset_melhor.png" id="1_m7cyb"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://scripts/deadzone.gd" id="15_myu1a"]
 [ext_resource type="PackedScene" uid="uid://dvr3m7uvcoqd2" path="res://cenas/mudar_fase.tscn" id="16_k4uje"]
 [ext_resource type="PackedScene" uid="uid://bsx24udpqg63w" path="res://cenas/cabos.tscn" id="16_xkfj1"]
+[ext_resource type="AudioStream" uid="uid://bu4xgyqb7oyoa" path="res://assets/sfx/Menu/som de iniciar o jogo.wav" id="18_lbew1"]
 
 [sub_resource type="Animation" id="Animation_xk8nd"]
 length = 0.001
@@ -653,6 +654,10 @@ position = Vector2(49991, -1603)
 
 [node name="cabos" parent="." instance=ExtResource("16_xkfj1")]
 position = Vector2(4382, 299)
+
+[node name="inicio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_lbew1")
+volume_db = -5.0
 
 [connection signal="body_entered" from="borda" to="." method="_on_borda_body_entered"]
 [connection signal="body_entered" from="borda2" to="." method="_on_borda_body_entered"]

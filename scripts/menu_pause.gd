@@ -2,6 +2,7 @@ extends Control
 
 @onready var menu_pause = $"."
 @onready var resume_button = $MarginContainer/VBoxContainer/resume_button	
+@onready var escolha = $escolha
 
 func resume():
 	get_tree().paused = false
@@ -22,17 +23,16 @@ func pausar():
 
 func _on_resume_pressed():
 	resume()
+	escolha.play()
 
 
 func _on_restart_pressed():
 	resume()
 	get_tree().reload_current_scene()
 	
-
-
 func _on_options_pressed():
-	pass # Replace with function body.
-
+	resume()
+	get_tree().change_scene_to_file("res://cenas/menu_opcoes.tscn")
 
 func _on_back_2_menu_pressed():
 	resume()

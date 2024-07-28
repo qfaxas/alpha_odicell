@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxq8hch18qwm6"]
+[gd_scene load_steps=5 format=3 uid="uid://dxq8hch18qwm6"]
 
 [ext_resource type="Script" path="res://scripts/menu_pause.gd" id="1_c7xod"]
 [ext_resource type="Script" path="res://scripts/resume_button.gd" id="2_ej6jr"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_gkw8a"]
+[ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="4_5411a"]
 
 [node name="menu_pause" type="Control"]
 process_mode = 3
@@ -60,6 +61,9 @@ focus_neighbor_top = NodePath("../options")
 focus_neighbor_bottom = NodePath("../resume_button")
 theme = ExtResource("2_gkw8a")
 text = "Menu"
+
+[node name="escolha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5411a")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/resume_button" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]

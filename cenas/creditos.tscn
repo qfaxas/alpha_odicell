@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmhciwt83m08x"]
+[gd_scene load_steps=5 format=3 uid="uid://cmhciwt83m08x"]
 
 [ext_resource type="Script" path="res://scripts/creditos.gd" id="1_2mqrq"]
 [ext_resource type="Texture2D" uid="uid://dend3ntik26nn" path="res://assets/arte/estrelas.png" id="2_0rayc"]
 [ext_resource type="Script" path="res://scripts/voltar.gd" id="2_bakek"]
+[ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="4_cid2f"]
 
 [node name="creditos" type="Control"]
 layout_mode = 3
@@ -86,4 +87,9 @@ theme_override_font_sizes/font_size = 30
 text = "Voltar"
 script = ExtResource("2_bakek")
 
+[node name="escolha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cid2f")
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/voltar" to="MarginContainer/VBoxContainer2/voltar" method="_on_pressed"]
+[connection signal="finished" from="escolha" to="." method="_on_escolha_finished"]
+[connection signal="finished" from="escolha" to="MarginContainer/VBoxContainer2/voltar" method="_on_escolha_finished"]

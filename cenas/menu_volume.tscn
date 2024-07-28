@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://csosqtad2m7nl"]
+[gd_scene load_steps=8 format=3 uid="uid://csosqtad2m7nl"]
 
+[ext_resource type="Script" path="res://scripts/menu_volume.gd" id="1_l7st2"]
 [ext_resource type="Script" path="res://scripts/volume_master.gd" id="1_n8eoq"]
 [ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="1_xepoo"]
 [ext_resource type="Script" path="res://scripts/mute.gd" id="2_p6jsg"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="3_36yv4"]
 [ext_resource type="Script" path="res://scripts/botao_voltar.gd" id="3_n0p4i"]
+[ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="7_h5bgv"]
 
 [node name="menu_volume" type="Control"]
 layout_mode = 3
@@ -13,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_l7st2")
 metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -101,6 +104,9 @@ focus_neighbor_bottom = NodePath("../master")
 theme = ExtResource("3_36yv4")
 text = "Voltar"
 script = ExtResource("3_n0p4i")
+
+[node name="escolha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_h5bgv")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/mute" to="MarginContainer/VBoxContainer/master" method="_on_mute_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/mute" to="MarginContainer/VBoxContainer/mute" method="_on_pressed"]
