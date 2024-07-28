@@ -478,7 +478,7 @@ scale = Vector2(1.71875, 1.71875)
 texture = ExtResource("5_oqchc")
 
 [node name="Personagem_principal" parent="." instance=ExtResource("2_k5bws")]
-position = Vector2(-2596, 257)
+position = Vector2(49988, -1911)
 
 [node name="quadrado_morte" parent="." instance=ExtResource("4_qnqvr")]
 position = Vector2(653, 583)
