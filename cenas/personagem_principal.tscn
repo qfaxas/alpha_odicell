@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://da5n8jr6ap2bf" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-10.png" id="11_16sjw"]
 [ext_resource type="Texture2D" uid="uid://chn5cm0c8tn3d" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-15.png" id="12_nf6s7"]
 [ext_resource type="Texture2D" uid="uid://b2xa21oku1t5a" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-16.png" id="13_n1mch"]
-[ext_resource type="AudioStream" uid="uid://b03x1ogasqfde" path="res://assets/sfx/Personagem/Movimentacao/step.mp3" id="21_5kg4r"]
+[ext_resource type="AudioStream" uid="uid://b03x1ogasqfde" path="res://assets/sfx/Personagem/Movimentacao/step.wav" id="21_673h7"]
 [ext_resource type="Texture2D" uid="uid://dq0ofmdhshtju" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-12.png" id="22_5w0mg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_44fmv"]
@@ -202,10 +202,12 @@ metadata/_edit_lock_ = true
 
 [node name="Pulo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jbw6n")
+volume_db = -4.0
 bus = &"efeitos"
 
 [node name="Passo" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("21_5kg4r")
+stream = ExtResource("21_673h7")
+volume_db = -7.0
 bus = &"efeitos"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

@@ -8,6 +8,9 @@ const JUMP_VELOCITY = -800.0
 @onready var energia = $energia
 @onready var luz = $PointLight2D
 @onready var tempo_morte = $tempo_morte
+@onready var pulo = $Pulo
+@onready var passo = $Passo
+@onready var morte = $Morte
 
 
 static var bateria :int = 4
@@ -44,23 +47,21 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):
 		jump_buffer = 0.1
+		pulo.play()
 	jump_buffer -= delta
 	if (jump_buffer > 0) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		$Pulo.play()
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y = JUMP_VELOCITY / 4
 		
-
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
-		if is_on_floor():
-			$Passo.play()
+		if is_on_floor() and not passo.is_playing():
+			passo.play()
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+		velocity.x = move_toward(velocity.x, 0, SPEED)		
 	#vira o personagem
 	var esquerda = velocity.x < 0
 	sprite_2d.flip_h = esquerda
