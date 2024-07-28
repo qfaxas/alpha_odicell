@@ -13,7 +13,7 @@ size = Vector2(38, 201.875)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0uydg"]
 polygon = PackedVector2Array(49, -86, 49, 133, 66, 132, 66, -90)
 
-[node name="porta" type="Area2D"]
+[node name="porta" type="Area2D" groups=["porta"]]
 script = ExtResource("1_jbf5f")
 
 [node name="fechado" type="Sprite2D" parent="."]

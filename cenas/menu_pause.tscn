@@ -59,7 +59,7 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../options")
 focus_neighbor_bottom = NodePath("../resume_button")
 theme = ExtResource("2_gkw8a")
-text = "Voltar para o Menu"
+text = "Menu"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/resume_button" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]

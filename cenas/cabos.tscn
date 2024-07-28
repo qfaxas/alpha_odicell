@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsx24udpqg63w"]
+[gd_scene load_steps=6 format=3 uid="uid://bsx24udpqg63w"]
 
 [ext_resource type="Script" path="res://scripts/cabos.gd" id="1_bukka"]
 [ext_resource type="Texture2D" uid="uid://cepikeuo0bax2" path="res://assets/arte/cabo.png" id="1_xwy21"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3a3hv"]
 size = Vector2(149, 44)
+
+[sub_resource type="Curve" id="Curve_3u8lo"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, -312.527), 0.0, 0.0, 0, 0, Vector2(0.97191, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_ynhn5"]
+colors = PackedColorArray(0.972549, 0.886275, 0, 1, 1, 0.427451, 0, 1)
 
 [node name="cabos" type="Area2D"]
 script = ExtResource("1_bukka")
@@ -21,6 +30,47 @@ shape = SubResource("RectangleShape2D_3a3hv")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-2, 39)
+amount = 10
+lifetime = 0.15
+explosiveness = 1.0
+randomness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(40, 1)
+gravity = Vector2(0, 900)
+initial_velocity_min = 101.01
+initial_velocity_max = 151.52
+angular_velocity_min = 300.0
+angular_velocity_max = 720.0
+angular_velocity_curve = SubResource("Curve_3u8lo")
+orbit_velocity_min = -2.0
+orbit_velocity_max = 2.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+color_ramp = SubResource("Gradient_ynhn5")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(-2, 39)
+amount = 10
+lifetime = 0.15
+explosiveness = 1.0
+randomness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(40, 1)
+direction = Vector2(-1, 2)
+gravity = Vector2(0, 900)
+initial_velocity_min = 10.0
+initial_velocity_max = 151.52
+angular_velocity_min = -720.0
+angular_velocity_max = -400.0
+angular_velocity_curve = SubResource("Curve_3u8lo")
+orbit_velocity_min = -2.0
+orbit_velocity_max = 2.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+color_ramp = SubResource("Gradient_ynhn5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
