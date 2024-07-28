@@ -10,7 +10,10 @@ func _ready():
 	morte.play()
 
 func _on_restart_pressed():
-	get_tree().reload_current_scene()
+	if Autoload.fase2:
+		get_tree().change_scene_to_file("res://cenas/fase_2.tscn")
+	else: 
+		get_tree().change_scene_to_file("res://cenas/fase_1.tscn")
 
 
 func _on_options_pressed():

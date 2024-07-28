@@ -11,7 +11,6 @@ script = ExtResource("1_wubpc")
 
 [node name="musicafundo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_s12c4")
-autoplay = true
 bus = &"musica"
 
 [node name="grelinho" type="AudioStreamPlayer" parent="."]

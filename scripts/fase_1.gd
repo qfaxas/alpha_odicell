@@ -4,14 +4,15 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	personagem_principal.bateria = 4
 	get_viewport().size = DisplayServer.screen_get_size()
+	MusicasESons.parar_creditos()
+	MusicasESons.tocar_musica()
 
 	
 func _enter_tree():
 	if Autoload.ultimo_checkpoint:
 		$Personagem_principal.global_position = Autoload.ultimo_checkpoint
-	MusicasESons.tocar_grelinho()
-
 
 func _on_borda_body_entered(body):
 	if (body.name == "Personagem_principal"):

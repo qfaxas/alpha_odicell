@@ -4,7 +4,8 @@ extends Control
 func _ready():
 	get_viewport().size = DisplayServer.screen_get_size()
 	$escolha.play()
-
+	MusicasESons.tocar_creditos()
+	
 func _on_play_button_pressed():
 	Autoload.ultimo_checkpoint = null
 	get_tree().change_scene_to_file("res://cenas/menu_fases.tscn")
