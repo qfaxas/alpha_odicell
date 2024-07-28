@@ -215,7 +215,7 @@ bus = &"efeitos"
 
 [node name="Passo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_673h7")
-volume_db = -7.0
+volume_db = -10.0
 bus = &"efeitos"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

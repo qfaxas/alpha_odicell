@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var personagem_principal = $Personagem_principal
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_viewport().size = DisplayServer.screen_get_size()
