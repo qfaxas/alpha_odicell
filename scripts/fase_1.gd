@@ -26,3 +26,5 @@ func _on_deadzone_body_entered(body):
 
 func _exit_tree():
 	MusicasESons.parar_grelinho()
+	
+

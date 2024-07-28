@@ -55,7 +55,7 @@ focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
 theme = ExtResource("2_d0v1e")
 texture_normal = ExtResource("4_3vwh1")
 texture_pressed = ExtResource("4_3vwh1")
-texture_hover = ExtResource("5_7dmys")
+texture_hover = ExtResource("4_3vwh1")
 texture_focused = ExtResource("5_7dmys")
 script = ExtResource("4_vo6ty")
 
@@ -86,7 +86,7 @@ focus_neighbor_bottom = NodePath("../../VBoxContainer/b2")
 theme = ExtResource("2_d0v1e")
 texture_normal = ExtResource("4_3vwh1")
 texture_pressed = ExtResource("4_3vwh1")
-texture_hover = ExtResource("5_7dmys")
+texture_hover = ExtResource("4_3vwh1")
 texture_focused = ExtResource("5_7dmys")
 
 [node name="Label" type="Label" parent="HBoxContainer/Button2"]
@@ -138,7 +138,7 @@ focus_neighbor_bottom = NodePath("../../HBoxContainer/Button")
 theme = ExtResource("2_d0v1e")
 texture_normal = ExtResource("4_3vwh1")
 texture_pressed = ExtResource("4_3vwh1")
-texture_hover = ExtResource("5_7dmys")
+texture_hover = ExtResource("4_3vwh1")
 texture_focused = ExtResource("5_7dmys")
 
 [node name="Label" type="Label" parent="VBoxContainer/b2"]
