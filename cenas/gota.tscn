@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://55jsgu3dt2rx"]
+
+[ext_resource type="Texture2D" uid="uid://c4u4gbmy2fbqr" path="res://assets/arte/gota.png" id="1_wwubd"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Animatablebody" type="AnimatableBody2D" parent="."]
+
+[node name="Gota" type="Sprite2D" parent="Animatablebody"]
+texture = ExtResource("1_wwubd")
