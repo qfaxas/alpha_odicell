@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c3so6flpnqijv"]
+[gd_scene load_steps=29 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://cm312adckubmc" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-03.png" id="1_lf5up"]
 [ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="1_vewkd"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b2xa21oku1t5a" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-16.png" id="13_n1mch"]
 [ext_resource type="AudioStream" uid="uid://b03x1ogasqfde" path="res://assets/sfx/Personagem/Movimentacao/step.wav" id="21_673h7"]
 [ext_resource type="Texture2D" uid="uid://dq0ofmdhshtju" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-12.png" id="22_5w0mg"]
+[ext_resource type="Texture2D" uid="uid://bo4k3hsro7ixf" path="res://assets/arte/estrela.png" id="23_r7xe6"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_44fmv"]
 light_mode = 1
@@ -163,6 +164,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xoje"]
 size = Vector2(99, 157)
 
+[sub_resource type="Curve" id="Curve_4x7f2"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0.011236, -296.703), 0.0, 0.0, 0, 0, Vector2(0.921348, 344.176), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Personagem_principal" type="CharacterBody2D"]
 position = Vector2(0, -2)
 script = ExtResource("1_vewkd")
@@ -221,5 +228,23 @@ metadata/_edit_lock_ = true
 
 [node name="energia" type="Timer" parent="."]
 wait_time = 6.0
+
+[node name="insan" type="CPUParticles2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-12, -935)
+lifetime = 5.0
+speed_scale = 2.0
+explosiveness = 0.2
+randomness = 0.5
+lifetime_randomness = 0.5
+texture = ExtResource("23_r7xe6")
+emission_shape = 3
+emission_rect_extents = Vector2(300, 1)
+angle_max = 45.0
+angle_curve = SubResource("Curve_4x7f2")
+scale_amount_min = 1.5
+scale_amount_max = 2.0
+color = Color(0.961518, 4.45209e-06, 9.62615e-07, 1)
 
 [connection signal="timeout" from="energia" to="." method="_on_energia_timeout"]

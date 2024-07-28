@@ -11,6 +11,7 @@ const JUMP_VELOCITY = -800.0
 @onready var pulo = $Pulo
 @onready var passo = $Passo
 @onready var morte = $Morte
+@onready var insan = $insan
 
 
 static var bateria :int = 4
@@ -77,18 +78,23 @@ func _physics_process(delta):
 	if (bateria == 4):
 		bateria_atual.animation = "cheio"
 		luz.texture_scale = 1.5
+		insan.hide()
+		
 	
 	elif (bateria == 3):
 		bateria_atual.animation = "75"
 		luz.texture_scale = 1.25
+		insan.hide()
 	
 	elif (bateria == 2):
 		bateria_atual.animation = "50"
 		luz.texture_scale = 1
+		insan.hide()
 		
 	elif (bateria == 1):
 		bateria_atual.animation = "25"
 		luz.texture_scale = 0.75
+		insan.show()
 	
 	if (bateria == 0):
 		morrer()
