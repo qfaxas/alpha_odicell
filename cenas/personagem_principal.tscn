@@ -5,10 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://bt17kt7ddeehg" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-01.png" id="2_7nv7j"]
 [ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
 [ext_resource type="Texture2D" uid="uid://edpsbw2yfb08" path="res://assets/arte/bateria_25.png" id="2_n61bx"]
-[ext_resource type="AudioStream" uid="uid://dgy55wxhbr8hh" path="res://assets/sfx/Movimentacao/jump.wav" id="3_jbw6n"]
+[ext_resource type="AudioStream" uid="uid://dgy55wxhbr8hh" path="res://assets/sfx/Personagem/Movimentacao/jump.wav" id="3_jbw6n"]
 [ext_resource type="Texture2D" uid="uid://cvca2hs3robee" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-02.png" id="3_pt4ix"]
 [ext_resource type="Texture2D" uid="uid://c43wjt7b06blq" path="res://assets/arte/sem_bat.png" id="3_tq5dc"]
-[ext_resource type="AudioStream" uid="uid://b7qdpjhwe1pi5" path="res://assets/sfx/Movimentacao/step.wav" id="4_bcfcs"]
 [ext_resource type="Texture2D" uid="uid://c05hgpb5t5lm8" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-04.png" id="4_myhh5"]
 [ext_resource type="Texture2D" uid="uid://dm04rly862luj" path="res://assets/arte/bateria_50.png" id="4_osivg"]
 [ext_resource type="Texture2D" uid="uid://dym0l51qm183b" path="res://assets/arte/bateria_75.png" id="5_vou1c"]
@@ -21,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://da5n8jr6ap2bf" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-10.png" id="11_16sjw"]
 [ext_resource type="Texture2D" uid="uid://chn5cm0c8tn3d" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-15.png" id="12_nf6s7"]
 [ext_resource type="Texture2D" uid="uid://b2xa21oku1t5a" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-16.png" id="13_n1mch"]
+[ext_resource type="AudioStream" uid="uid://b03x1ogasqfde" path="res://assets/sfx/Personagem/Movimentacao/step.mp3" id="21_5kg4r"]
 [ext_resource type="Texture2D" uid="uid://dq0ofmdhshtju" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-12.png" id="22_5w0mg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_44fmv"]
@@ -205,7 +205,7 @@ stream = ExtResource("3_jbw6n")
 bus = &"efeitos"
 
 [node name="Passo" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_bcfcs")
+stream = ExtResource("21_5kg4r")
 bus = &"efeitos"
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

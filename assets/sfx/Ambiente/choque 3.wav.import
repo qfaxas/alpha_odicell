@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://b7qdpjhwe1pi5"
-path="res://.godot/imported/step.wav-85a828c7123fa0c256439b5648f04e65.sample"
+uid="uid://0ajngsq55tx8"
+path="res://.godot/imported/choque 3.wav-653a273791b0b052830fa5d602195130.sample"
 
 [deps]
 
-source_file="res://assets/sfx/Movimentacao/step.wav"
-dest_files=["res://.godot/imported/step.wav-85a828c7123fa0c256439b5648f04e65.sample"]
+source_file="res://assets/sfx/Ambiente/choque 3.wav"
+dest_files=["res://.godot/imported/choque 3.wav-653a273791b0b052830fa5d602195130.sample"]
 
 [params]
 
