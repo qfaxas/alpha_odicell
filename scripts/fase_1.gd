@@ -27,3 +27,11 @@ func _exit_tree():
 	MusicasESons.parar_final()
 	
 
+func _on_borda_2_body_entered(body):
+	if (body.name == "Personagem_principal"):
+		get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
+
+
+func _on_borda_3_body_entered(body):
+	if (body.name == "Personagem_principal"):
+		get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")

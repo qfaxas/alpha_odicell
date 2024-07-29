@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bly0xjlofdkrs"]
+[gd_scene load_steps=10 format=3 uid="uid://b3mqlq5dkmto3"]
 
 [ext_resource type="Texture2D" uid="uid://bl24w8hjqrrep" path="res://assets/arte/background.png" id="1_k5u4i"]
 [ext_resource type="Texture2D" uid="uid://dggm8ufa4wmlr" path="res://assets/arte/CAMA.png" id="2_cepu1"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="3_u62a1"]
+[ext_resource type="PackedScene" uid="uid://c3so6flpnqijv" path="res://cenas/personagem_principal.tscn" id="4_6oqes"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03ne2"]
 texture = ExtResource("3_u62a1")
@@ -16,6 +17,15 @@ texture_region_size = Vector2i(4, 4)
 [sub_resource type="TileSet" id="TileSet_h8qv3"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_03ne2")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4i1lm"]
+polygon = PackedVector2Array(-1611, 677, 1543, 695, 1540, 742, -1750, 720, -1714, -730, -1596, -719)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_opupx"]
+polygon = PackedVector2Array(1532, 695, 1525, -677, -1600, -684, -1589, -748, 1593, -744, 1579, 706)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyw8r"]
+size = Vector2(608.5, 573)
 
 [node name="Node2D" type="Node2D"]
 
@@ -38,3 +48,19 @@ texture = ExtResource("2_cepu1")
 tile_set = SubResource("TileSet_h8qv3")
 format = 2
 layer_0/tile_data = PackedInt32Array(2752415, 5767168, 10, 2752424, 5767168, 10, 2752433, 5767168, 10, 2752442, 5767168, 10, 2752451, 5767168, 10, 2752460, 5767168, 10, 2752469, 5767168, 10, 2752478, 5767168, 10, 2752487, 5767168, 10, 2752496, 5767168, 10, 2752505, 5767168, 10, 2686978, 5767168, 10, 2686987, 5767168, 10, 2686996, 5767168, 10, 2687005, 5767168, 10, 2687014, 5767168, 10, 2687023, 5767168, 10, 2687032, 5767168, 10, 2687041, 5767168, 10, 2687050, 5767168, 10, 2687059, 5767168, 10, 2687068, 5767168, 10)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_4i1lm")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_opupx")
+
+[node name="Personagem_principal" parent="." instance=ExtResource("4_6oqes")]
+position = Vector2(-1478, 479)
+scale = Vector2(1.02424, 0.601309)
+
+[node name="fim" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fim"]
+position = Vector2(1228.75, 341.5)
+shape = SubResource("RectangleShape2D_cyw8r")
