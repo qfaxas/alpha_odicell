@@ -1,20 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://d14r4auc3otsf"]
 
 [ext_resource type="Script" path="res://scripts/mudar_fase.gd" id="1_hga0o"]
-[ext_resource type="Texture2D" uid="uid://cvhm4x436b5f0" path="res://assets/arte/odicell_logo-Photoroom.png" id="1_pkc0j"]
+[ext_resource type="Texture2D" uid="uid://dvy83qru2f8bs" path="res://assets/arte/portta-aberta.png" id="2_elutw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4quyd"]
-size = Vector2(281, 65)
+size = Vector2(41, 65)
 
 [node name="mudar_fase" type="Area2D"]
 script = ExtResource("1_hga0o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_pkc0j")
+texture = ExtResource("2_elutw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, -2.5)
+position = Vector2(0.5, 6)
 shape = SubResource("RectangleShape2D_4quyd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
