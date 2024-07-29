@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bsx24udpqg63w" path="res://cenas/cabos.tscn" id="11_vfypb"]
 [ext_resource type="Texture2D" uid="uid://b3hhxwg55be4a" path="res://assets/arte/PLACA PLATAFORMA.png" id="12_tl5qo"]
 [ext_resource type="Texture2D" uid="uid://cxwfwnxo38el7" path="res://assets/arte/placa gota.png" id="13_57tpk"]
-[ext_resource type="PackedScene" path="res://cenas/porta_esq.tscn" id="16_b8wkh"]
+[ext_resource type="PackedScene" uid="uid://pbovc7lljl5b" path="res://cenas/porta_esq.tscn" id="16_b8wkh"]
 [ext_resource type="PackedScene" uid="uid://d14r4auc3otsf" path="res://cenas/mudar_fase.tscn" id="17_qd8qv"]
 [ext_resource type="Script" path="res://scripts/borda.gd" id="18_uvt2s"]
 
@@ -667,7 +667,7 @@ b = Vector2(2246, 46)
 a = Vector2(3709, -3)
 b = Vector2(-2311, 48)
 
-[node name="fase 2" type="Node2D"]
+[node name="fase2" type="Node2D"]
 script = ExtResource("1_tit0r")
 
 [node name="Fundo" type="TextureRect" parent="."]
@@ -728,7 +728,6 @@ rotation = 3.14159
 scale = Vector2(-3.69014, -2.2762)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste2"]
-root_node = NodePath("../../plataformaspriteteste2")
 libraries = {
 "": SubResource("AnimationLibrary_0ixaj")
 }
@@ -791,7 +790,6 @@ position = Vector2(-10089, 109)
 scale = Vector2(3.77919, 2.3106)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste7"]
-root_node = NodePath("../../plataformaspriteteste7")
 libraries = {
 "": SubResource("AnimationLibrary_8dd76")
 }

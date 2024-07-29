@@ -7,7 +7,7 @@ func _ready():
 
 func _on_button_pressed():
 	Autoload.ultimo_checkpoint = null
-	get_tree().change_scene_to_file("res://cenas/fase_1.tscn")
+	get_tree().change_scene_to_file("res://cenas/frase_1.tscn")
 	
 
 func _on_button_2_pressed():

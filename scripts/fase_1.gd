@@ -8,11 +8,16 @@ func _ready():
 	get_viewport().size = DisplayServer.screen_get_size()
 	MusicasESons.parar_creditos()
 	MusicasESons.tocar_final()
+	
 
 	
 func _enter_tree():
 	if Autoload.ultimo_checkpoint:
 		$Personagem_principal.global_position = Autoload.ultimo_checkpoint
+		
+func _exit_tree():
+	if not Autoload.fase3:
+		MusicasESons.parar_final()
 
 func _on_borda_body_entered(body):
 	if (body.name == "Personagem_principal"):
@@ -21,11 +26,7 @@ func _on_borda_body_entered(body):
 
 func _on_deadzone_body_entered(body):
 	if (body.name == "Personagem_principal"):
-		get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")
-
-func _exit_tree():
-	MusicasESons.parar_final()
-	
+		get_tree().change_scene_to_file("res://cenas/menu_morte.tscn")	
 
 func _on_borda_2_body_entered(body):
 	if (body.name == "Personagem_principal"):

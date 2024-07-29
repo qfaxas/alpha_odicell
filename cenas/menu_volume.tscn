@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://csosqtad2m7nl"]
+[gd_scene load_steps=9 format=3 uid="uid://csosqtad2m7nl"]
 
 [ext_resource type="Script" path="res://scripts/menu_volume.gd" id="1_l7st2"]
 [ext_resource type="Script" path="res://scripts/volume_master.gd" id="1_n8eoq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/mute.gd" id="2_p6jsg"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="3_36yv4"]
 [ext_resource type="Script" path="res://scripts/botao_voltar.gd" id="3_n0p4i"]
+[ext_resource type="FontFile" uid="uid://85qgsai3748v" path="res://assets/arte/DeliusSwashCaps-Regular.ttf" id="3_s6kfd"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="7_h5bgv"]
 
 [node name="menu_volume" type="Control"]
@@ -28,6 +29,13 @@ grow_vertical = 2
 texture = ExtResource("1_xepoo")
 expand_mode = 1
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 351.0
+offset_right = 1888.0
+offset_bottom = 679.0
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -48,6 +56,8 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s6kfd")
+theme_override_font_sizes/font_size = 32
 text = "Geral"
 
 [node name="master" type="HSlider" parent="MarginContainer/VBoxContainer"]
@@ -62,6 +72,8 @@ bus_name = "Master"
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s6kfd")
+theme_override_font_sizes/font_size = 32
 text = "Música"
 
 [node name="musica" type="HSlider" parent="MarginContainer/VBoxContainer"]
@@ -76,6 +88,8 @@ bus_name = "musica"
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s6kfd")
+theme_override_font_sizes/font_size = 32
 text = "VFX"
 
 [node name="efeitos" type="HSlider" parent="MarginContainer/VBoxContainer"]
@@ -93,6 +107,8 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../efeitos")
 focus_neighbor_bottom = NodePath("../Button")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_s6kfd")
+theme_override_font_sizes/font_size = 32
 text = "Mutar Jogo"
 script = ExtResource("2_p6jsg")
 

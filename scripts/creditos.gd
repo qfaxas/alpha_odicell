@@ -8,5 +8,5 @@ func _ready():
 
 func _exit_tree():
 	MusicasESons.parar_creditos()
-	MusicasESons.tocar_musica()
+	MusicasESons.parar_final()
 
