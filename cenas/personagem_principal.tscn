@@ -228,7 +228,7 @@ texture_scale = 1.5
 metadata/_edit_lock_ = true
 
 [node name="energia" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 6.7
 
 [node name="insan" type="CPUParticles2D" parent="."]
 visible = false
