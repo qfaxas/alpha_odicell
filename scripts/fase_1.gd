@@ -16,8 +16,7 @@ func _enter_tree():
 		$Personagem_principal.global_position = Autoload.ultimo_checkpoint
 		
 func _exit_tree():
-	if not Autoload.fase3:
-		MusicasESons.parar_final()
+	MusicasESons.parar_final()
 
 func _on_borda_body_entered(body):
 	if (body.name == "Personagem_principal"):

@@ -122,4 +122,4 @@ func _on_energia_timeout():
 
 func _on_fim_body_entered(body):
 	if body.name == "Personagem_principal":
-		get_tree().change_scene_to_file("res://cenas/creditos.tscn")
+		get_tree().change_scene_to_file("res://cenas/frasefim.tscn")
