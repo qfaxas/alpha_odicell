@@ -79,7 +79,7 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../play_button")
 focus_neighbor_bottom = NodePath("../credits_button")
 theme = ExtResource("4_sxa8k")
-text = "   Opções   "
+text = "   Volume   "
 
 [node name="credits_button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
