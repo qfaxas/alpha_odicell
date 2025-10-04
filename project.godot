@@ -12,13 +12,14 @@ config_version=5
 
 config/name="alpha_odicell"
 run/main_scene="res://cenas/menu_principal.tscn"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Autoload="*res://cenas/autoload.tscn"
 MusicasESons="*res://cenas/musicas_e_sons.tscn"
+GameManager="*res://scripts/GameManager.gd"
 
 [display]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://vp54rd3udimm"]
 
 [ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="1_a0nsa"]
-[ext_resource type="Script" uid="uid://nh6lhxbisn33" path="res://scripts/menu_fases.gd" id="1_a3exr"]
+[ext_resource type="Script" uid="uid://dmngosoy2ay13" path="res://scripts/menu_fases.gd" id="1_a3exr"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_d0v1e"]
 [ext_resource type="Texture2D" uid="uid://c3lm81p6yrsrn" path="res://assets/arte/botao_simples.png" id="4_3vwh1"]
-[ext_resource type="Script" uid="uid://cd8xoixatmpe6" path="res://scripts/botao_fases.gd" id="4_vo6ty"]
+[ext_resource type="Script" uid="uid://b2rvv21t5p7fg" path="res://scripts/botao_fases.gd" id="4_vo6ty"]
 [ext_resource type="Texture2D" uid="uid://dv2f2iasj3iho" path="res://assets/arte/foco2.png" id="5_7dmys"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="5_i7sgl"]
 [ext_resource type="AudioStream" uid="uid://bp0cgiabm5nt0" path="res://assets/sfx/Ambiente/choque 1.wav" id="7_jk2b8"]
@@ -19,7 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_a3exr")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 2
+layout_mode = 0
 offset_left = -646.0
 offset_top = -145.5
 offset_right = 2566.0
@@ -37,7 +37,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -524.0
-offset_top = -94.0
+offset_top = -112.0
 offset_right = 524.0
 offset_bottom = 94.0
 grow_horizontal = 2
@@ -62,17 +62,19 @@ script = ExtResource("4_vo6ty")
 [node name="Label" type="Label" parent="HBoxContainer/Button"]
 texture_filter = 1
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = 30.0
-offset_right = -7.0
-offset_bottom = -4.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -44.0
+offset_right = 100.0
+offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
-text = "ÍNICIO"
+text = "INÍCIO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -91,18 +93,19 @@ texture_focused = ExtResource("5_7dmys")
 
 [node name="Label" type="Label" parent="HBoxContainer/Button2"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 28.0
-offset_right = 1.0
-offset_bottom = -6.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -89.5
+offset_right = 56.5
+offset_bottom = 89.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
-text = "FIM
-"
+text = "FIM"
 horizontal_alignment = 1
 vertical_alignment = 1
 

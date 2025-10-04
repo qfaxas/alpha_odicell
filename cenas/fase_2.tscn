@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cxwfwnxo38el7" path="res://assets/arte/placa gota.png" id="13_57tpk"]
 [ext_resource type="PackedScene" uid="uid://pbovc7lljl5b" path="res://cenas/porta_esq.tscn" id="16_b8wkh"]
 [ext_resource type="PackedScene" uid="uid://d14r4auc3otsf" path="res://cenas/mudar_fase.tscn" id="17_qd8qv"]
-[ext_resource type="Script" uid="uid://dcprkhied8u34" path="res://scripts/borda.gd" id="18_uvt2s"]
+[ext_resource type="Script" uid="uid://bbf67ckjsmu5e" path="res://scripts/borda.gd" id="18_uvt2s"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tp264"]
 
@@ -678,7 +678,7 @@ scale = Vector2(3.58877, 2.37405)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste"]
 libraries = {
-"": SubResource("AnimationLibrary_a16wb")
+&"": SubResource("AnimationLibrary_a16wb")
 }
 autoplay = "cima"
 
@@ -689,7 +689,7 @@ scale = Vector2(-3.69014, -2.2762)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste2"]
 libraries = {
-"": SubResource("AnimationLibrary_0ixaj")
+&"": SubResource("AnimationLibrary_0ixaj")
 }
 autoplay = "ladi"
 
@@ -700,7 +700,7 @@ scale = Vector2(3.62983, -2.20798)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspritetest2e3"]
 libraries = {
-"": SubResource("AnimationLibrary_xiwxn")
+&"": SubResource("AnimationLibrary_xiwxn")
 }
 autoplay = "ladinho"
 
@@ -710,7 +710,7 @@ scale = Vector2(3.63, 3.087)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste3"]
 libraries = {
-"": SubResource("AnimationLibrary_q4mk6")
+&"": SubResource("AnimationLibrary_q4mk6")
 }
 autoplay = "a"
 
@@ -720,7 +720,7 @@ scale = Vector2(3.63, 3.63)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste4"]
 libraries = {
-"": SubResource("AnimationLibrary_p1hm8")
+&"": SubResource("AnimationLibrary_p1hm8")
 }
 autoplay = "sada"
 
@@ -730,7 +730,7 @@ scale = Vector2(3, 1.8)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste5"]
 libraries = {
-"": SubResource("AnimationLibrary_o640k")
+&"": SubResource("AnimationLibrary_o640k")
 }
 autoplay = "fi"
 
@@ -741,7 +741,7 @@ scale = Vector2(3, -1.841)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste6"]
 libraries = {
-"": SubResource("AnimationLibrary_n6d63")
+&"": SubResource("AnimationLibrary_n6d63")
 }
 autoplay = "as"
 
@@ -751,7 +751,7 @@ scale = Vector2(3.77919, 2.3106)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaspriteteste7"]
 libraries = {
-"": SubResource("AnimationLibrary_8dd76")
+&"": SubResource("AnimationLibrary_8dd76")
 }
 autoplay = "acaboutrptmj"
 
@@ -829,7 +829,7 @@ position = Vector2(2494, 197)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gota"]
 libraries = {
-"": SubResource("AnimationLibrary_4m7uw")
+&"": SubResource("AnimationLibrary_4m7uw")
 }
 autoplay = "adoletalepetipetipola"
 
@@ -838,7 +838,7 @@ position = Vector2(2494, 197)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gota5"]
 libraries = {
-"": SubResource("AnimationLibrary_4m7uw")
+&"": SubResource("AnimationLibrary_4m7uw")
 }
 autoplay = "caicaibalao"
 
@@ -847,7 +847,7 @@ position = Vector2(2494, 197)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gota7"]
 libraries = {
-"": SubResource("AnimationLibrary_4m7uw")
+&"": SubResource("AnimationLibrary_4m7uw")
 }
 autoplay = "gotanova"
 
@@ -856,7 +856,7 @@ position = Vector2(2494, 197)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gota8"]
 libraries = {
-"": SubResource("AnimationLibrary_4m7uw")
+&"": SubResource("AnimationLibrary_4m7uw")
 }
 autoplay = "pariperi"
 
@@ -865,7 +865,7 @@ position = Vector2(1178, 552)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gota2"]
 libraries = {
-"": SubResource("AnimationLibrary_c5bet")
+&"": SubResource("AnimationLibrary_c5bet")
 }
 autoplay = "asdasdasdasdasdasd"
 
@@ -874,7 +874,7 @@ position = Vector2(139, 399)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gota3"]
 libraries = {
-"": SubResource("AnimationLibrary_thrt0")
+&"": SubResource("AnimationLibrary_thrt0")
 }
 autoplay = "al"
 
@@ -883,7 +883,7 @@ position = Vector2(139, 399)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gota4"]
 libraries = {
-"": SubResource("AnimationLibrary_thrt0")
+&"": SubResource("AnimationLibrary_thrt0")
 }
 autoplay = "abecedeeefgf"
 
@@ -892,7 +892,7 @@ position = Vector2(139, 399)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="gota6"]
 libraries = {
-"": SubResource("AnimationLibrary_thrt0")
+&"": SubResource("AnimationLibrary_thrt0")
 }
 autoplay = "gota"
 
