@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://d1jxpw8vdu2fs"]
 
-[ext_resource type="Script" path="res://scripts/menu_opcoes.gd" id="1_dp5ff"]
+[ext_resource type="Script" uid="uid://bh2qmovxwddcy" path="res://scripts/menu_opcoes.gd" id="1_dp5ff"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_8v721"]
 [ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="2_gw15w"]
-[ext_resource type="Script" path="res://scripts/volume_button.gd" id="2_pdya7"]
+[ext_resource type="Script" uid="uid://duwk3bby20qcp" path="res://scripts/volume_button.gd" id="2_pdya7"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="5_v1gtx"]
 
 [node name="menu_opcoes" type="Control"]

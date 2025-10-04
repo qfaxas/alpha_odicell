@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c57uxl6p6u2wj"]
 
-[ext_resource type="Script" path="res://scripts/recargas.gd" id="1_1lr7h"]
+[ext_resource type="Script" uid="uid://dkjgfn153hg62" path="res://scripts/recargas.gd" id="1_1lr7h"]
 [ext_resource type="Texture2D" uid="uid://jattqkeyn0qa" path="res://assets/arte/pilha_01-01.png" id="2_4levn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu3g"]

@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://csosqtad2m7nl"]
 
-[ext_resource type="Script" path="res://scripts/menu_volume.gd" id="1_l7st2"]
-[ext_resource type="Script" path="res://scripts/volume_master.gd" id="1_n8eoq"]
+[ext_resource type="Script" uid="uid://4d0xmycq4h0x" path="res://scripts/menu_volume.gd" id="1_l7st2"]
+[ext_resource type="Script" uid="uid://gwqnb6afetks" path="res://scripts/volume_master.gd" id="1_n8eoq"]
 [ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="1_xepoo"]
-[ext_resource type="Script" path="res://scripts/mute.gd" id="2_p6jsg"]
+[ext_resource type="Script" uid="uid://dbocwp48i6i70" path="res://scripts/mute.gd" id="2_p6jsg"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="3_36yv4"]
-[ext_resource type="Script" path="res://scripts/botao_voltar.gd" id="3_n0p4i"]
+[ext_resource type="Script" uid="uid://b3mo0fref47uf" path="res://scripts/botao_voltar.gd" id="3_n0p4i"]
 [ext_resource type="FontFile" uid="uid://85qgsai3748v" path="res://assets/arte/DeliusSwashCaps-Regular.ttf" id="3_s6kfd"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="7_h5bgv"]
 

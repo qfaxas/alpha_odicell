@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bsx24udpqg63w"]
 
-[ext_resource type="Script" path="res://scripts/cabos.gd" id="1_bukka"]
+[ext_resource type="Script" uid="uid://c2cmwxlimijuc" path="res://scripts/cabos.gd" id="1_bukka"]
 [ext_resource type="Texture2D" uid="uid://cepikeuo0bax2" path="res://assets/arte/cabo.png" id="1_xwy21"]
 [ext_resource type="AudioStream" uid="uid://t3ijp15kgi7u" path="res://assets/sfx/Ambiente/choque 4.wav" id="3_1h751"]
 
@@ -8,8 +8,7 @@
 size = Vector2(149, 44)
 
 [sub_resource type="Curve" id="Curve_3u8lo"]
-min_value = -360.0
-max_value = 360.0
+_limits = [-360.0, 360.0, 0.0, 1.0]
 _data = [Vector2(0, -312.527), 0.0, 0.0, 0, 0, Vector2(0.97191, 360), 0.0, 0.0, 0, 0]
 point_count = 2
 

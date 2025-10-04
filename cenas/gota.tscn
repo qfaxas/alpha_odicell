@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1wumxfkfglfi"]
 
-[ext_resource type="Script" path="res://scripts/gotas.gd" id="1_3cytt"]
+[ext_resource type="Script" uid="uid://cmbpcp43ric1o" path="res://scripts/gotas.gd" id="1_3cytt"]
 [ext_resource type="Texture2D" uid="uid://c4u4gbmy2fbqr" path="res://assets/arte/gota.png" id="1_wwubd"]
 [ext_resource type="AudioStream" uid="uid://b358dtfe647d7" path="res://assets/sfx/Personagem/Interacao/hit choque.wav" id="3_ok0yq"]
 

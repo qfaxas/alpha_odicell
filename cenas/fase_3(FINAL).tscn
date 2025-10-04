@@ -1,12 +1,12 @@
 [gd_scene load_steps=16 format=3 uid="uid://b3mqlq5dkmto3"]
 
 [ext_resource type="Texture2D" uid="uid://bl24w8hjqrrep" path="res://assets/arte/background.png" id="1_k5u4i"]
-[ext_resource type="Script" path="res://scripts/fase_3(FINAL).gd" id="1_miieq"]
+[ext_resource type="Script" uid="uid://c2kw8hm1jt32j" path="res://scripts/fase_3(FINAL).gd" id="1_miieq"]
 [ext_resource type="Texture2D" uid="uid://b1a8mprry6e4" path="res://assets/arte/fundo2.png" id="1_tyssm"]
 [ext_resource type="Texture2D" uid="uid://dggm8ufa4wmlr" path="res://assets/arte/CAMA.png" id="2_cepu1"]
 [ext_resource type="Texture2D" uid="uid://vmo7fpq27yem" path="res://assets/arte/blocos.png" id="3_u62a1"]
 [ext_resource type="PackedScene" uid="uid://c3so6flpnqijv" path="res://cenas/personagem_principal.tscn" id="4_6oqes"]
-[ext_resource type="Script" path="res://scripts/fim.gd" id="6_w5pem"]
+[ext_resource type="Script" uid="uid://b4sgqtehls5gx" path="res://scripts/fim.gd" id="6_w5pem"]
 [ext_resource type="PackedScene" uid="uid://dxq8hch18qwm6" path="res://cenas/menu_pause.tscn" id="8_c6tmc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03ne2"]
@@ -14,8 +14,6 @@ texture = ExtResource("3_u62a1")
 texture_region_size = Vector2i(4, 4)
 88:10/size_in_atlas = Vector2i(35, 17)
 88:10/0 = 0
-88:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-88:10/0/physics_layer_0/angular_velocity = 0.0
 88:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-67.1751, -28.2843, 67.1751, -27.5772, 68.5894, 30.4056, -67.1751, 31.1127)
 
 [sub_resource type="TileSet" id="TileSet_h8qv3"]

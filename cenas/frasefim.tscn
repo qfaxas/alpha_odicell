@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4n0b2ig1xiop"]
 
-[ext_resource type="Script" path="res://scripts/frasefim.gd" id="1_irxt6"]
+[ext_resource type="Script" uid="uid://cxnay4trm8why" path="res://scripts/frasefim.gd" id="1_irxt6"]
 [ext_resource type="Texture2D" uid="uid://dq61os0wg5lwb" path="res://assets/arte/frasefim.png" id="1_qxfmk"]
 [ext_resource type="FontFile" uid="uid://85qgsai3748v" path="res://assets/arte/DeliusSwashCaps-Regular.ttf" id="2_8lhwc"]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmhciwt83m08x"]
 
-[ext_resource type="Script" path="res://scripts/creditos.gd" id="1_2mqrq"]
+[ext_resource type="Script" uid="uid://clbc6n3w8t5su" path="res://scripts/creditos.gd" id="1_2mqrq"]
 [ext_resource type="Texture2D" uid="uid://dend3ntik26nn" path="res://assets/arte/estrelas.png" id="2_0rayc"]
-[ext_resource type="Script" path="res://scripts/voltar.gd" id="2_bakek"]
+[ext_resource type="Script" uid="uid://ctdt8lyn2ad60" path="res://scripts/voltar.gd" id="2_bakek"]
 [ext_resource type="FontFile" uid="uid://85qgsai3748v" path="res://assets/arte/DeliusSwashCaps-Regular.ttf" id="3_excun"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="4_cid2f"]
 

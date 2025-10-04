@@ -12,6 +12,7 @@ func _on_body_entered(body):
 		$ai.play()
 
 		personagem_principal.bateria -= 1
+		personagem_principal.screen_shake(40, 0.5)
 
 
 func _on_timer_timeout():

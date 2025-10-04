@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://c3so6flpnqijv"]
 
 [ext_resource type="Texture2D" uid="uid://cm312adckubmc" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-03.png" id="1_lf5up"]
-[ext_resource type="Script" path="res://scripts/personagem_principal.gd" id="1_vewkd"]
+[ext_resource type="Script" uid="uid://uoyj2jwptfor" path="res://scripts/personagem_principal.gd" id="1_vewkd"]
 [ext_resource type="Texture2D" uid="uid://bt17kt7ddeehg" path="res://assets/arte/Presonagem_Odicell/personagem_teste1-01.png" id="2_7nv7j"]
 [ext_resource type="Texture2D" uid="uid://ditnc4ixywcge" path="res://assets/arte/bateria_cheia.png" id="2_bv4xw"]
 [ext_resource type="Texture2D" uid="uid://edpsbw2yfb08" path="res://assets/arte/bateria_25.png" id="2_n61bx"]
@@ -165,8 +165,7 @@ animations = [{
 size = Vector2(99, 157)
 
 [sub_resource type="Curve" id="Curve_4x7f2"]
-min_value = -360.0
-max_value = 360.0
+_limits = [-360.0, 360.0, 0.0, 1.0]
 _data = [Vector2(0.011236, -296.703), 0.0, 0.0, 0, 0, Vector2(0.921348, 344.176), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -228,18 +227,18 @@ texture_scale = 1.5
 metadata/_edit_lock_ = true
 
 [node name="energia" type="Timer" parent="."]
-wait_time = 6.7
+wait_time = 8.5
 
 [node name="insan" type="CPUParticles2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(-12, -935)
+texture = ExtResource("23_r7xe6")
 lifetime = 5.0
 speed_scale = 2.0
 explosiveness = 0.2
 randomness = 0.5
 lifetime_randomness = 0.5
-texture = ExtResource("23_r7xe6")
 emission_shape = 3
 emission_rect_extents = Vector2(300, 1)
 angle_max = 45.0

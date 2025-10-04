@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://vp54rd3udimm"]
 
 [ext_resource type="Texture2D" uid="uid://dpawtabdhbhhv" path="res://assets/arte/fundo_menu.png" id="1_a0nsa"]
-[ext_resource type="Script" path="res://scripts/menu_fases.gd" id="1_a3exr"]
+[ext_resource type="Script" uid="uid://nh6lhxbisn33" path="res://scripts/menu_fases.gd" id="1_a3exr"]
 [ext_resource type="Theme" uid="uid://dopnw7sydav2e" path="res://assets/arte/tema_botoes.tres" id="2_d0v1e"]
 [ext_resource type="Texture2D" uid="uid://c3lm81p6yrsrn" path="res://assets/arte/botao_simples.png" id="4_3vwh1"]
-[ext_resource type="Script" path="res://scripts/botao_fases.gd" id="4_vo6ty"]
+[ext_resource type="Script" uid="uid://cd8xoixatmpe6" path="res://scripts/botao_fases.gd" id="4_vo6ty"]
 [ext_resource type="Texture2D" uid="uid://dv2f2iasj3iho" path="res://assets/arte/foco2.png" id="5_7dmys"]
 [ext_resource type="AudioStream" uid="uid://q68upoyi5s6i" path="res://assets/sfx/Menu/selecionar opcao.wav" id="5_i7sgl"]
 [ext_resource type="AudioStream" uid="uid://bp0cgiabm5nt0" path="res://assets/sfx/Ambiente/choque 1.wav" id="7_jk2b8"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://wvfsqg2uhupc"]
 
-[ext_resource type="Script" path="res://scripts/checkpoint.gd" id="1_pe1tr"]
+[ext_resource type="Script" uid="uid://d28a5dilrat1p" path="res://scripts/checkpoint.gd" id="1_pe1tr"]
 [ext_resource type="Texture2D" uid="uid://c5frq5mo6yl3m" path="res://assets/arte/terminal_de_recarga.png" id="2_2jfkl"]
 [ext_resource type="AudioStream" uid="uid://dlynu0u6iosxb" path="res://assets/sfx/Personagem/Interacao/liberar novo checkpoint.wav" id="3_t2ed1"]
 
