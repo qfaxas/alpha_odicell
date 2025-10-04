@@ -9,7 +9,9 @@ func _ready():
 func _on_play_button_pressed():
 	Autoload.ultimo_checkpoint = null
 	get_tree().change_scene_to_file("res://cenas/menu_fases.tscn")
-
+	Autoload.fase1 = true
+	Autoload.fase2 = false
+	Autoload.fase3 = false
 
 func _on_ranking_button_pressed():
 	get_tree().change_scene_to_file("res://cenas/cena_ranking.tscn")

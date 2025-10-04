@@ -37,6 +37,7 @@ func _on_options_pressed():
 func _on_back_2_menu_pressed():
 	resume()
 	get_tree().change_scene_to_file("res://cenas/menu_principal.tscn")
+	Autoload.ultimo_checkpoint = null
 
 func _process(delta):
 	pausar()
