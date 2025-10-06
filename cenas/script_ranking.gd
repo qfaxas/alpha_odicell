@@ -29,8 +29,10 @@ func populate_ranking():
 		var formatted_time = GameManager.format_time(entry.time)
 		
 		var entry_label = Label.new()
-		entry_label.text = "%d. %s - %s" % [rank, player_name, formatted_time]
+		var text = "%d. %s - %s" % [rank, player_name, formatted_time]
+		entry_label.text = text
 		
+		print(text)
 		score_list_container.add_child(entry_label)
 
 func _on_menu_button_pressed():

@@ -51,10 +51,6 @@ func save_score(player_name: String, time: float):
 
 	# **A parte mais importante: ordenar a lista pelo menor tempo**
 	scores.sort_custom(func(a, b): return a.time < b.time)
-	
-	# Opcional: Limitar o ranking a um número de entradas (ex: Top 10)
-	if scores.size() > 10:
-		scores = scores.slice(0, 10)
 
 	# Salva o array de volta no arquivo
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
